@@ -1,10 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class GameController : MonoBehaviour
 {
-
+    public int buttonExpected = 0;
+    public List<ButtonGame> listButtons;
     public Camera mainCamera;
 
     // Start is called before the first frame update
@@ -16,24 +17,38 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        if (Input.GetMouseButtonDown(0))
-        {
-            Debug.Log("Click");
-            Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, 1000f))
+    }
+
+    public void CheckOrderButtonsPressed(int bottonId)
+    {
+        Debug.Log("Id do botão pressionado: " + bottonId);
+        Debug.Log("Id do botão esperado: " + buttonExpected);
+        if(listButtons[buttonExpected].id == bottonId)
+        {
+            if(listButtons.Count - 1 == buttonExpected)
             {
-                Debug.Log("dentro do ray");
-                // whatever tag you are looking for on your game object
-                if (hit.collider.tag == "ButtonGame")
-                {
-                    Debug.Log("---> Hit: ");
-                }
+                Debug.Log("Todos os botões pressionados, proxima fase...");
+                NextLevel();
+            } else
+            {
+                Debug.Log("Botão certo");
+                buttonExpected += 1;
             }
+        } else
+        {
+            Debug.Log("Botão errado, reiniciando fase...");
+            buttonExpected = 0;
         }
-        */
-        
+    }
+
+    void EndGame()
+    {
+    
+    }
+
+    void NextLevel()
+    {
+
     }
 }
