@@ -7,6 +7,11 @@ public class ButtonGame : MonoBehaviour
 {
     public int id;
     public bool isButtonInSequence;
+    public bool isClickable = true;
+    public Sprite buttonOnSprite;
+    public Sprite buttonOffSprite;
+    public Sprite buttonWrongSprite;
+
     GameController gameController;
 
     // Start is called before the first frame update
@@ -23,8 +28,16 @@ public class ButtonGame : MonoBehaviour
 
     void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0)) {
-            gameController.CheckOrderButtonsPressed(id);
+        if (Input.GetMouseButtonDown(0) && isClickable && gameController.allowPlayerControl) {
+            bool isButtonCorrect = gameController.isButtonCorrect(id);
+            isClickable = false;
+            if (isButtonCorrect)
+            {
+                GetComponent<SpriteRenderer>().sprite = buttonOnSprite;
+            } else
+            {
+                GetComponent<SpriteRenderer>().sprite = buttonWrongSprite;
+            }
         }
     }
 }

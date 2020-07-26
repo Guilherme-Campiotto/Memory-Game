@@ -66,8 +66,12 @@
     <Compile Include="Assets\Color Palette\Scripts\ColorPaletteComponent.cs" />
     <Compile Include="Assets\Color Palette\Scripts\ColorPaletteCustomData.cs" />
     <Compile Include="Assets\Color Palette\Scripts\ColorPaletteWindow.cs" />
+    <Compile Include="Assets\Menu.cs" />
     <Compile Include="Assets\Scripts\ButtonGame.cs" />
+    <Compile Include="Assets\Scripts\ButtonsToPlay.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\SoundController.cs" />
+    <Compile Include="Assets\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/guilh/OneDrive/Área de Trabalho/Projeto puzzle/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
