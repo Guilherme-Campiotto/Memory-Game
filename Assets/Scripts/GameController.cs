@@ -12,11 +12,38 @@ public class GameController : MonoBehaviour
     public Camera mainCamera;
     public bool allowPlayerControl = false;
     public float timeToShowButtons = 0.5f;
+    public SoundController soundController;
+
+    public static AudioClip menu;
+    public static AudioClip theme1;
+    public static AudioClip theme2;
+    public static AudioClip theme3;
+    public static AudioClip theme4;
+    public static AudioClip theme5;
+    public static AudioClip theme6;
+    public static AudioClip themeIntro;
+    public static AudioClip themeEnding;
+    AudioClip buttonRightSound;
+    AudioClip levelCompleteSound;
 
     // Start is called before the first frame update
     void Start()
     {
+        buttonRightSound = Resources.Load<AudioClip>("Sound/Sound_Effects/Button_Click/coin_22");
+        levelCompleteSound = Resources.Load<AudioClip>("Sound/Sound_Effects/power_up_18");
+
         StartCoroutine(ShowButtonsToPlay());
+
+        GameObject soundObject = GameObject.Find("SoundController");
+
+        if (!soundObject.activeSelf)
+        {
+            soundObject.SetActive(true);
+        }
+
+        soundController = soundObject.GetComponent<SoundController>();
+        CheckMusicTheme(SceneManager.GetActiveScene().buildIndex);
+
     }
 
     // Update is called once per frame
@@ -27,24 +54,25 @@ public class GameController : MonoBehaviour
 
     public bool isButtonCorrect(int bottonId)
     {
-        Debug.Log("Id do botão pressionado: " + bottonId);
-        Debug.Log("Id do botão esperado: " + buttonExpected);
+        //Debug.Log("Id do botão pressionado: " + bottonId);
+        //Debug.Log("Id do botão esperado: " + buttonExpected);
         if(listButtons[buttonExpected].id == bottonId)
         {
             if(listButtons.Count - 1 == buttonExpected)
             {
-                Debug.Log("Todos os botões pressionados, proxima fase...");
+                //Debug.Log("Todos os botões pressionados, proxima fase...");
+                soundController.PlayAudioOnce(levelCompleteSound);
                 allowPlayerControl = false;
                 return true;
             } else
             {
-                Debug.Log("Botão certo");
+                //Debug.Log("Botão certo");
                 buttonExpected += 1;
                 return true;
             }
         } else
         {
-            Debug.Log("Botão errado");
+            //Debug.Log("Botão errado");
             allowPlayerControl = false;
             return false;
         }
@@ -74,10 +102,11 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(timeToShowButtons);
         foreach (ButtonGame button in listButtons)
         {
-            Debug.Log("Acendeu");
+            //Debug.Log("Acendeu");
             button.GetComponent<SpriteRenderer>().sprite = button.buttonOnSprite;
+            soundController.PlayAudioOnce(buttonRightSound);
             yield return new WaitForSeconds(timeToShowButtons);
-            Debug.Log("Apagou");
+            //Debug.Log("Apagou");
             button.GetComponent<SpriteRenderer>().sprite = button.buttonOffSprite;
         }
 
@@ -94,6 +123,27 @@ public class GameController : MonoBehaviour
         buttonExpected = 0;
 
         StartCoroutine(ShowButtonsToPlay());
+    }
+
+    private void CheckMusicTheme(int sceneIndex)
+    {
+        Debug.Log(sceneIndex);
+        switch (sceneIndex)
+        {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+                if (themeIntro == null)
+                {
+                    themeIntro = theme2 = theme3 = theme4 = theme5 = theme6 = themeEnding = null;
+                    theme1= Resources.Load<AudioClip>("Sound/Musics/Adventure_Puzzle_Medieval");
+                    soundController.PlayWithLoop(theme1);
+                }
+                break;
+        }
     }
 }
 

@@ -9,7 +9,6 @@ public class SoundController : MonoBehaviour
 
     void Awake()
     {
-        //clickSound = Resources.Load<AudioClip>("Sounds/Sound_Effects/UI/Hit2");
 
         if (gameObject.CompareTag("SoundController") && instance != null && instance != this)
         {
@@ -33,7 +32,7 @@ public class SoundController : MonoBehaviour
         }
     }
 
-    public void PlayAudioOnce(AudioClip clip, float volume = 1f)
+    public void PlayAudioOnce(AudioClip clip, float volume = 2f)
     {
         audioSource.PlayOneShot(clip, volume);
     }

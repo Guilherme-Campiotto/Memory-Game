@@ -500,7 +500,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 647338735}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &784354382
+--- !u!21 &873635890
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -626,7 +626,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 784354382}
+  - {fileID: 873635890}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
