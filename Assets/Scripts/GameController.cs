@@ -49,7 +49,10 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     public bool isButtonCorrect(int bottonId)
@@ -136,7 +139,7 @@ public class GameController : MonoBehaviour
             case 3:
             case 4:
             case 5:
-                if (themeIntro == null)
+                if (theme1 == null)
                 {
                     themeIntro = theme2 = theme3 = theme4 = theme5 = theme6 = themeEnding = null;
                     theme1= Resources.Load<AudioClip>("Sound/Musics/Adventure_Puzzle_Medieval");
