@@ -55,11 +55,11 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public bool isButtonCorrect(int bottonId)
+    public bool isButtonCorrect(string name)
     {
         //Debug.Log("Id do botão pressionado: " + bottonId);
         //Debug.Log("Id do botão esperado: " + buttonExpected);
-        if(listButtons[buttonExpected].id == bottonId)
+        if(listButtons[buttonExpected].gameObject.name == name)
         {
             if(listButtons.Count - 1 == buttonExpected)
             {

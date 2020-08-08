@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class ButtonGame : MonoBehaviour
 {
-    public int id;
     public bool isButtonInSequence;
     public bool isClickable = true;
     
@@ -64,7 +63,7 @@ public class ButtonGame : MonoBehaviour
     void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0) && isClickable && gameController.allowPlayerControl) {
-            bool isButtonCorrect = gameController.isButtonCorrect(id);
+            bool isButtonCorrect = gameController.isButtonCorrect(gameObject.name);
             isClickable = false;
             if (isButtonCorrect)
             {
