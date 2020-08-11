@@ -9,9 +9,12 @@ public class GameController : MonoBehaviour
     public int buttonExpected = 0;
     public List<ButtonGame> listButtons;
     public List<ButtonGame> listButtonsComplete;
+    public List<GameObject> listObjectsToReveal;
+
     public Camera mainCamera;
     public bool allowPlayerControl = false;
     public float timeToShowButtons = 0.5f;
+    public float timeToShowStars = 0.5f;
     public SoundController soundController;
 
     public static AudioClip menu;
@@ -66,6 +69,7 @@ public class GameController : MonoBehaviour
                 //Debug.Log("Todos os botões pressionados, proxima fase...");
                 soundController.PlayAudioOnce(levelCompleteSound);
                 allowPlayerControl = false;
+                StartCoroutine(RevealStars());
                 return true;
             } else
             {
@@ -146,6 +150,25 @@ public class GameController : MonoBehaviour
                     soundController.PlayWithLoop(theme1);
                 }
                 break;
+        }
+    }
+
+    IEnumerator RevealStars()
+    {
+        foreach (GameObject objectToReveal in listObjectsToReveal)
+        {
+            objectToReveal.SetActive(true);
+            yield return new WaitForSeconds(timeToShowStars);
+        }
+
+        HideButtons();
+    }
+
+    private void HideButtons()
+    {
+        foreach (ButtonGame button in listButtonsComplete)
+        {
+            button.gameObject.SetActive(false);
         }
     }
 }
