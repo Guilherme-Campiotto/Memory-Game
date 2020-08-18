@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
@@ -29,8 +28,10 @@ public class GameController : MonoBehaviour
     AudioClip buttonRightSound;
     AudioClip levelCompleteSound;
 
+    public int currentLevel;
+
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         buttonRightSound = Resources.Load<AudioClip>("Sound/Sound_Effects/Button_Click/coin_22");
         levelCompleteSound = Resources.Load<AudioClip>("Sound/Sound_Effects/power_up_18");
@@ -50,7 +51,7 @@ public class GameController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
@@ -93,6 +94,8 @@ public class GameController : MonoBehaviour
     public void NextLevel()
     {
         int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+
+        SaveGame(nextScene);
 
         if (nextScene > 5)
         {
@@ -170,6 +173,17 @@ public class GameController : MonoBehaviour
         {
             button.gameObject.SetActive(false);
         }
+    }
+
+    public void SaveGame(int level)
+    {
+        PlayerPrefs.SetInt("currentLevel", level);
+    }
+
+    public int LoadGame()
+    {
+        int currentLevel = PlayerPrefs.GetInt("currentLevel");
+        return currentLevel;
     }
 }
 
