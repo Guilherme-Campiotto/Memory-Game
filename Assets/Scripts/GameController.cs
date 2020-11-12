@@ -97,7 +97,7 @@ public class GameController : MonoBehaviour
 
         SaveGame(nextScene);
 
-        if (nextScene > 5)
+        if (nextScene > 11)
         {
             EndGame();
         }
