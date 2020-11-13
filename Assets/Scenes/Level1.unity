@@ -1095,8 +1095,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223798270}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -2.8, y: 1.275, z: 0}
-  m_LocalScale: {x: 0.7435005, y: 0.47766155, z: 0.7435}
+  m_LocalPosition: {x: -2.7882, y: 1.275, z: 0}
+  m_LocalScale: {x: 0.7435005, y: 0.6025878, z: 0.7435}
   m_Children:
   - {fileID: 386438069}
   m_Father: {fileID: 1142615481383856881}
@@ -1241,18 +1241,6 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!114 &1380591594 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8587671290789384315, guid: 9bd908812eb30614cb5a7083acdc3353,
-    type: 3}
-  m_PrefabInstance: {fileID: 8587671291557345169}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c483689fb36b1a14980a4539124c475c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1400857972
 GameObject:
   m_ObjectHideFlags: 0
@@ -1629,7 +1617,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.8117648, g: 0.80392164, b: 0.34117648, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 0.8
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -2528,6 +2516,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartsRevealed
       objectReference: {fileID: 0}
+    - target: {fileID: 4235929186965219361, guid: 81eaa2190cfd1724d8ce4118b52cec20,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81eaa2190cfd1724d8ce4118b52cec20, type: 3}
 --- !u!224 &1142615481383856881 stripped
@@ -2543,11 +2536,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1414040050373169238, guid: e45baf7432e4a1343990e28d7b0f59f9,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 519420031}
     - target: {fileID: 1414040050373169239, guid: e45baf7432e4a1343990e28d7b0f59f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2662,12 +2650,24 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1380591594}
+      objectReference: {fileID: 8587671290789384315, guid: 9bd908812eb30614cb5a7083acdc3353,
+        type: 3}
+    - target: {fileID: 1414040051431414651, guid: e45baf7432e4a1343990e28d7b0f59f9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetButtons
+      objectReference: {fileID: 0}
     - target: {fileID: 1414040052135054962, guid: e45baf7432e4a1343990e28d7b0f59f9,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1380591594}
+      objectReference: {fileID: 8587671290789384315, guid: 9bd908812eb30614cb5a7083acdc3353,
+        type: 3}
+    - target: {fileID: 1414040052135054962, guid: e45baf7432e4a1343990e28d7b0f59f9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextLevel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e45baf7432e4a1343990e28d7b0f59f9, type: 3}
 --- !u!1001 &1427679615435208388
@@ -2681,6 +2681,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GridOfButtons
+      objectReference: {fileID: 0}
+    - target: {fileID: 778774686025643933, guid: 98ca3c7aa1fc00946bcc6e7d85e82b03,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7474958247310225250, guid: 98ca3c7aa1fc00946bcc6e7d85e82b03,
         type: 3}
@@ -2822,8 +2827,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2550493609142594998}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -2.4, y: 1.9120002, z: 0}
-  m_LocalScale: {x: 0.7435005, y: 0.47766155, z: 0.7435}
+  m_LocalPosition: {x: -2.3972, y: 1.9120002, z: 0}
+  m_LocalScale: {x: 0.7435005, y: 0.5750316, z: 0.7435}
   m_Children:
   - {fileID: 389286676}
   m_Father: {fileID: 1142615481383856881}
