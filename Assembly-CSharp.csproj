@@ -67,6 +67,15 @@
     <Compile Include="Assets\Color Palette\Scripts\ColorPaletteComponent.cs" />
     <Compile Include="Assets\Color Palette\Scripts\ColorPaletteCustomData.cs" />
     <Compile Include="Assets\Color Palette\Scripts\ColorPaletteWindow.cs" />
+    <Compile Include="Assets\Minimal Puzzle 2D\Demo\Scripts\General\AudioManager.cs" />
+    <Compile Include="Assets\Minimal Puzzle 2D\Demo\Scripts\UI\UI.cs" />
+    <Compile Include="Assets\Minimal Puzzle 2D\Demo\Scripts\UI\UI_AudioComponent.cs" />
+    <Compile Include="Assets\Minimal Puzzle 2D\Demo\Scripts\UI\UI_HUD.cs" />
+    <Compile Include="Assets\Minimal Puzzle 2D\Demo\Scripts\UI\UI_ScreenComponent.cs" />
+    <Compile Include="Assets\Minimal Puzzle 2D\Scripts\MinimalPuzzle2D\MinimalPuzzle2D.cs" />
+    <Compile Include="Assets\Minimal Puzzle 2D\Scripts\MinimalPuzzle2D\MinimalPuzzle2DComponent.cs" />
+    <Compile Include="Assets\Minimal Puzzle 2D\Scripts\MinimalPuzzle2D\MinimalPuzzle2DCustomData.cs" />
+    <Compile Include="Assets\Minimal Puzzle 2D\Scripts\MinimalPuzzle2D\MinimalPuzzle2DWindow.cs" />
     <Compile Include="Assets\Scripts\ButtonGame.cs" />
     <Compile Include="Assets\Scripts\ButtonsToPlay.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
@@ -74,6 +83,7 @@
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\SoundController.cs" />
     <Compile Include="Assets\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
+    <None Include="Assets\Minimal Puzzle 2D\Demo\Arts\Fonts\Montserrat\OFL.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/guilh/Desktop/Memory Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
