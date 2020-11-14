@@ -191,7 +191,9 @@ MonoBehaviour:
   buttonOnSprite: {fileID: 4447304904168371832, guid: f4cc48f652e2bd141a3cfa901400e660,
     type: 3}
   buttonOffSprite: {fileID: 21300000, guid: d6d5b297aa53fcc418a4c63d0911849c, type: 3}
-  buttonWrongSprite: {fileID: -7611439029266180085, guid: 252b8b8ac8e641d4bb0de69c28a99279,
+  buttonWrongRedSprite: {fileID: -6080344963617704216, guid: d190d5db0113e1149ba0b1c3766a0ae7,
+    type: 3}
+  buttonWrongYellowSprite: {fileID: -7611439029266180085, guid: 252b8b8ac8e641d4bb0de69c28a99279,
     type: 3}
 --- !u!61 &169818002932943608
 BoxCollider2D:

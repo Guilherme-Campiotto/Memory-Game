@@ -17,7 +17,8 @@ public class ButtonGame : MonoBehaviour
 
     public Sprite buttonOnSprite;
     public Sprite buttonOffSprite;
-    public Sprite buttonWrongSprite;
+    public Sprite buttonWrongRedSprite;
+    public Sprite buttonWrongYellowSprite;
 
     AudioClip buttonRightSound;
     AudioClip buttonWrongSound;
@@ -72,8 +73,15 @@ public class ButtonGame : MonoBehaviour
 
             } else
             {
+                if(gameController.isButtonPresssedWrongInsideList(gameObject.name))
+                {
+                    GetComponent<SpriteRenderer>().sprite = buttonWrongYellowSprite;
+                } else
+                {
+                    GetComponent<SpriteRenderer>().sprite = buttonWrongRedSprite;
+                }
                 soundController.PlayAudioOnce(buttonWrongSound);
-                GetComponent<SpriteRenderer>().sprite = buttonWrongSprite;
+                
             }
         }
     }

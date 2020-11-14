@@ -15,16 +15,8 @@ public class GameController : MonoBehaviour
     public float timeToShowButtons = 0.5f;
     public float timeToShowStars = 0.5f;
     public SoundController soundController;
+    public Menu menu;
 
-    public static AudioClip menu;
-    public static AudioClip theme1;
-    public static AudioClip theme2;
-    public static AudioClip theme3;
-    public static AudioClip theme4;
-    public static AudioClip theme5;
-    public static AudioClip theme6;
-    public static AudioClip themeIntro;
-    public static AudioClip themeEnding;
     AudioClip buttonRightSound;
     AudioClip levelCompleteSound;
 
@@ -39,14 +31,19 @@ public class GameController : MonoBehaviour
         StartCoroutine(ShowButtonsToPlay());
 
         GameObject soundObject = GameObject.Find("SoundController");
+        GameObject menuObject = GameObject.Find("Canvas");
 
         if (!soundObject.activeSelf)
         {
             soundObject.SetActive(true);
         }
 
+        if (menuObject != null)
+        {
+            menu = menuObject.GetComponent<Menu>();
+        }
+
         soundController = soundObject.GetComponent<SoundController>();
-        CheckMusicTheme(SceneManager.GetActiveScene().buildIndex);
 
     }
 
@@ -82,6 +79,8 @@ public class GameController : MonoBehaviour
         {
             //Debug.Log("Botão errado");
             allowPlayerControl = false;
+            menu.ChangeButtonRestartVisibility();
+
             return false;
         }
     }
@@ -89,6 +88,21 @@ public class GameController : MonoBehaviour
     void EndGame()
     {
         Debug.Log("Game ends.");
+    }
+
+    public bool isButtonPresssedWrongInsideList(string buttonName)
+    {
+        bool isInsideList = false;
+
+        foreach(ButtonGame btn in listButtons)
+        {
+            if(btn.gameObject.name.Equals(buttonName))
+            {
+                isInsideList = true;
+            }
+        }
+
+        return isInsideList;
     }
 
     public void NextLevel()
@@ -133,27 +147,8 @@ public class GameController : MonoBehaviour
         buttonExpected = 0;
 
         StartCoroutine(ShowButtonsToPlay());
-    }
 
-    private void CheckMusicTheme(int sceneIndex)
-    {
-        Debug.Log(sceneIndex);
-        switch (sceneIndex)
-        {
-            case 0:
-            case 1:
-            case 2:
-            case 3:
-            case 4:
-            case 5:
-                if (theme1 == null)
-                {
-                    themeIntro = theme2 = theme3 = theme4 = theme5 = theme6 = themeEnding = null;
-                    theme1= Resources.Load<AudioClip>("Sound/Musics/Adventure_Puzzle_Medieval");
-                    soundController.PlayWithLoop(theme1);
-                }
-                break;
-        }
+        menu.ChangeButtonRestartVisibility();
     }
 
     IEnumerator RevealStars()
@@ -165,6 +160,8 @@ public class GameController : MonoBehaviour
         }
 
         HideButtons();
+
+        menu.ChangeButtonNextVisibility();
     }
 
     private void HideButtons()

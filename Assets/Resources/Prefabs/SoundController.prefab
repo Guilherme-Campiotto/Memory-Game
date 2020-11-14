@@ -141,3 +141,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 353438864343502808}
+  soundtrack:
+  - {fileID: 8300000, guid: 079b16d65b3b04fe8aee9e756c46e985, type: 3}
+  - {fileID: 8300000, guid: b2f08eaf10fed284daebd2f5a748bd80, type: 3}
+  numberOfSongs: 0
+  numberOfCurrentSong: 0
+  nextSongQueue: 0
+  timePlayNextSong: 2
