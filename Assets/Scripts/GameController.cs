@@ -16,7 +16,6 @@ public class GameController : MonoBehaviour
     public float timeToShowStars = 0.5f;
     public SoundController soundController;
     public Menu menu;
-    public DebugMode debugMode;
 
     AudioClip buttonRightSound;
     AudioClip levelCompleteSound;
@@ -42,21 +41,9 @@ public class GameController : MonoBehaviour
         if (menuObject != null)
         {
             menu = menuObject.GetComponent<Menu>();
-            debugMode = menuObject.GetComponent<DebugMode>();
         }
 
         soundController = soundObject.GetComponent<SoundController>();
-
-        if (debugMode != null)
-        {
-            debugMode.stopCountLevel = false;
-
-            if(SceneManager.GetActiveScene().buildIndex == 0)
-            {
-                PlayerPrefs.SetFloat("LevelCurrentTime", 0);
-            }
-
-        }
 
     }
 
@@ -78,11 +65,6 @@ public class GameController : MonoBehaviour
             if(listButtons.Count - 1 == buttonExpected)
             {
                 //Debug.Log("Todos os botões pressionados, proxima fase...");
-                PlayerPrefs.SetFloat("LevelCurrentTime", Time.time);
-                if(debugMode != null)
-                {
-                    debugMode.stopCountLevel = true;
-                }
 
                 soundController.PlayAudioOnce(levelCompleteSound);
                 allowPlayerControl = false;

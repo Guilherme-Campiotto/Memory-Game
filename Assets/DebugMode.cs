@@ -22,8 +22,6 @@ public class DebugMode : MonoBehaviour
     public Text txtTimeLevel;
     public Text txtNumberOfTries;
 
-    public bool stopCountLevel = false;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -31,8 +29,6 @@ public class DebugMode : MonoBehaviour
         timeTotalString = txtTimeTotal.text;
         timeLevelString = txtTimeLevel.text;
         numberOfTriesString = txtNumberOfTries.text;
-
-        timeLevel = timeLevelSaved = PlayerPrefs.GetFloat("LevelCurrentTime");
     }
 
     // Update is called once per frame
@@ -40,11 +36,7 @@ public class DebugMode : MonoBehaviour
     {
         deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
         fps = 1.0f / deltaTime;
-
-        if(!stopCountLevel)
-        {
-            timeLevel = Time.time - timeLevelSaved;
-        }
+        timeLevel = Time.timeSinceLevelLoad;
 
         ConvertToText();
     }
@@ -54,6 +46,6 @@ public class DebugMode : MonoBehaviour
         txtFps.text = fpsString + Mathf.Ceil(fps).ToString();
         txtTimeTotal.text = timeTotalString + Time.time.ToString("f2");
         txtTimeLevel.text = timeLevelString + timeLevel.ToString("f2");
-
+        txtNumberOfTries.text = numberOfTriesString + numberOfTries;
     }
 }

@@ -25,6 +25,8 @@ public class ButtonGame : MonoBehaviour
 
     SoundController soundController;
     GameController gameController;
+    DebugMode debugMode;
+
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,7 @@ public class ButtonGame : MonoBehaviour
         buttonWrongSound = Resources.Load<AudioClip>("Sound/Sound_Effects/Button_Click/game_over_20");
 
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
+        debugMode = GameObject.Find("Canvas").GetComponent<DebugMode>();
 
         GameObject soundObject = GameObject.Find("SoundController");
 
@@ -80,8 +83,14 @@ public class ButtonGame : MonoBehaviour
                 {
                     GetComponent<SpriteRenderer>().sprite = buttonWrongRedSprite;
                 }
+
                 soundController.PlayAudioOnce(buttonWrongSound);
                 
+                if(debugMode != null)
+                {
+                    debugMode.numberOfTries++;
+                }
+
             }
         }
     }
