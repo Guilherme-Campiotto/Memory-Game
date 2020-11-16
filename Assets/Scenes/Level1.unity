@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1048,6 +1048,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 169818002932943615, guid: be882f7e1e711fd40b3c8f4862758e81,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169818002932943615, guid: be882f7e1e711fd40b3c8f4862758e81,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169818002932943615, guid: be882f7e1e711fd40b3c8f4862758e81,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be882f7e1e711fd40b3c8f4862758e81, type: 3}
 --- !u!114 &1316954548 stripped
@@ -1797,42 +1812,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1645998285, guid: e45baf7432e4a1343990e28d7b0f59f9, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -17.700073
-      objectReference: {fileID: 0}
-    - target: {fileID: 2022777183, guid: e45baf7432e4a1343990e28d7b0f59f9, type: 3}
-      propertyPath: CurrentColor.r
-      value: 0.50980395
-      objectReference: {fileID: 0}
-    - target: {fileID: 2022777183, guid: e45baf7432e4a1343990e28d7b0f59f9, type: 3}
-      propertyPath: CurrentColor.g
-      value: 0.8000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 2022777183, guid: e45baf7432e4a1343990e28d7b0f59f9, type: 3}
-      propertyPath: CurrentColor.b
-      value: 0.4156863
-      objectReference: {fileID: 0}
-    - target: {fileID: 2022777183, guid: e45baf7432e4a1343990e28d7b0f59f9, type: 3}
-      propertyPath: PaletteName
-      value: Mountains
-      objectReference: {fileID: 0}
-    - target: {fileID: 2022777183, guid: e45baf7432e4a1343990e28d7b0f59f9, type: 3}
-      propertyPath: ColorPaletteIndex
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2022777185, guid: e45baf7432e4a1343990e28d7b0f59f9, type: 3}
-      propertyPath: m_Color.r
-      value: 0.50980395
-      objectReference: {fileID: 0}
-    - target: {fileID: 2022777185, guid: e45baf7432e4a1343990e28d7b0f59f9, type: 3}
-      propertyPath: m_Color.g
-      value: 0.8000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 2022777185, guid: e45baf7432e4a1343990e28d7b0f59f9, type: 3}
-      propertyPath: m_Color.b
-      value: 0.4156863
-      objectReference: {fileID: 0}
     - target: {fileID: 1414040050373169239, guid: e45baf7432e4a1343990e28d7b0f59f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1943,6 +1922,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1414040050373169243, guid: e45baf7432e4a1343990e28d7b0f59f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e45baf7432e4a1343990e28d7b0f59f9, type: 3}
 --- !u!1001 &1427679615435208388
@@ -1975,7 +1959,7 @@ PrefabInstance:
     - target: {fileID: 7474958247310225250, guid: 98ca3c7aa1fc00946bcc6e7d85e82b03,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.090251
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7474958247310225250, guid: 98ca3c7aa1fc00946bcc6e7d85e82b03,
         type: 3}
@@ -2220,41 +2204,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5017908593991329932, guid: 6f2e153a9e8f0404fa99ee5fa8acd850,
-        type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0.14901961
-      objectReference: {fileID: 0}
-    - target: {fileID: 5017908593991329932, guid: 6f2e153a9e8f0404fa99ee5fa8acd850,
-        type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0.21568629
-      objectReference: {fileID: 0}
-    - target: {fileID: 5017908593991329932, guid: 6f2e153a9e8f0404fa99ee5fa8acd850,
-        type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 0.2627451
-      objectReference: {fileID: 0}
-    - target: {fileID: 5017908593991329933, guid: 6f2e153a9e8f0404fa99ee5fa8acd850,
-        type: 3}
-      propertyPath: ColorPaletteIndex
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5017908593991329933, guid: 6f2e153a9e8f0404fa99ee5fa8acd850,
-        type: 3}
-      propertyPath: CurrentColor.r
-      value: 0.14901961
-      objectReference: {fileID: 0}
-    - target: {fileID: 5017908593991329933, guid: 6f2e153a9e8f0404fa99ee5fa8acd850,
-        type: 3}
-      propertyPath: CurrentColor.g
-      value: 0.21568629
-      objectReference: {fileID: 0}
-    - target: {fileID: 5017908593991329933, guid: 6f2e153a9e8f0404fa99ee5fa8acd850,
-        type: 3}
-      propertyPath: CurrentColor.b
-      value: 0.2627451
       objectReference: {fileID: 0}
     - target: {fileID: 5017908593991329935, guid: 6f2e153a9e8f0404fa99ee5fa8acd850,
         type: 3}

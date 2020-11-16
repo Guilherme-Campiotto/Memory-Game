@@ -67,6 +67,7 @@
     <Compile Include="Assets\Color Palette\Scripts\ColorPaletteComponent.cs" />
     <Compile Include="Assets\Color Palette\Scripts\ColorPaletteCustomData.cs" />
     <Compile Include="Assets\Color Palette\Scripts\ColorPaletteWindow.cs" />
+    <Compile Include="Assets\DebugMode.cs" />
     <Compile Include="Assets\Minimal Puzzle 2D\Demo\Scripts\General\AudioManager.cs" />
     <Compile Include="Assets\Minimal Puzzle 2D\Demo\Scripts\UI\UI.cs" />
     <Compile Include="Assets\Minimal Puzzle 2D\Demo\Scripts\UI\UI_AudioComponent.cs" />

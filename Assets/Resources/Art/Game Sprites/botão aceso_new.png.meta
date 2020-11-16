@@ -1,43 +1,43 @@
 fileFormatVersion: 2
-guid: f4cc48f652e2bd141a3cfa901400e660
+guid: e07fcbe57d910b84c9436ec59d1d2470
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6091555914615913563
-    second: "Bot\xE3o aceso_0"
+      213: -6048424139600558775
+    second: "bot\xE3o aceso_new_0"
   - first:
-      213: 7973198395807685338
-    second: "Bot\xE3o aceso_1"
+      213: -7883760420809115388
+    second: "bot\xE3o aceso_new_1"
   - first:
-      213: 7166393788500450813
-    second: "Bot\xE3o aceso_2"
+      213: -3005098449623507301
+    second: "bot\xE3o aceso_new_2"
   - first:
-      213: 4142702838199109882
-    second: "Bot\xE3o aceso_3"
+      213: -6877827951578061975
+    second: "bot\xE3o aceso_new_3"
   - first:
-      213: -8290573086032589194
-    second: "Bot\xE3o aceso_4"
+      213: 6369225576479116090
+    second: "bot\xE3o aceso_new_4"
   - first:
-      213: -5890103046313536531
-    second: "Bot\xE3o aceso_5"
+      213: -6728140261452783200
+    second: "bot\xE3o aceso_new_5"
   - first:
-      213: 7410722483315097431
-    second: "Bot\xE3o aceso_6"
+      213: 2441913725993928643
+    second: "bot\xE3o aceso_new_6"
   - first:
-      213: -7154092668056770143
-    second: "Bot\xE3o aceso_7"
+      213: 6737362174802672419
+    second: "bot\xE3o aceso_new_7"
   - first:
-      213: 3821032481878883269
-    second: "Bot\xE3o aceso_8"
+      213: 173185989217130840
+    second: "bot\xE3o aceso_new_8"
   - first:
-      213: 525090498735047715
-    second: "Bot\xE3o aceso_9"
+      213: 5234704682534943453
+    second: "bot\xE3o aceso_new_9"
   - first:
-      213: -5308099777414702505
-    second: "Bot\xE3o aceso_10"
+      213: -4499361026508915224
+    second: "bot\xE3o aceso_new_10"
   - first:
-      213: 4447304904168371832
-    second: "Bot\xE3o aceso_11"
+      213: -238465787007760247
+    second: "bot\xE3o aceso_new_11"
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -118,257 +118,269 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Bot\xE3o aceso_0"
+      name: "bot\xE3o aceso_new_0"
       rect:
         serializedVersion: 2
-        x: 22
-        y: 4
+        x: 23
+        y: 19
         width: 95
         height: 104
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd9919b6691f10e40b5d8453c545d7fb
-      internalID: -6091555914615913563
+      spriteID: a57b91cb5d20a74408b2eca1ad986979
+      internalID: -6048424139600558775
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Bot\xE3o aceso_1"
+      name: "bot\xE3o aceso_new_1"
       rect:
         serializedVersion: 2
-        x: 135
-        y: 4
+        x: 165
+        y: 19
+        width: 95
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07b84e7a597d710459e5d6810586d13e
+      internalID: -7883760420809115388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "bot\xE3o aceso_new_2"
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 20
+        width: 95
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df7458abbd40b80498aaab7c1c00dd91
+      internalID: -3005098449623507301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "bot\xE3o aceso_new_3"
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 19
         width: 96
         height: 104
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 259795a47b1eed0498517db3b0fddcf2
-      internalID: 7973198395807685338
+      spriteID: fde2c276b2074e34591f1e401ce23575
+      internalID: -6877827951578061975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Bot\xE3o aceso_2"
+      name: "bot\xE3o aceso_new_4"
       rect:
         serializedVersion: 2
-        x: 249
-        y: 4
+        x: 590
+        y: 19
         width: 95
         height: 104
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5999881c0835315439c5c3cd564b8d36
-      internalID: 7166393788500450813
+      spriteID: a8ce84cbc98d93149b0476e7c8bb8bcf
+      internalID: 6369225576479116090
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Bot\xE3o aceso_3"
+      name: "bot\xE3o aceso_new_5"
       rect:
         serializedVersion: 2
-        x: 362
-        y: 4
+        x: 732
+        y: 19
         width: 95
         height: 104
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72e16c72413c817428b06279e8e35d71
-      internalID: 4142702838199109882
+      spriteID: 6a6f14a85db62424ab535486e5a38847
+      internalID: -6728140261452783200
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Bot\xE3o aceso_4"
+      name: "bot\xE3o aceso_new_6"
       rect:
         serializedVersion: 2
-        x: 475
-        y: 6
-        width: 95
-        height: 103
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e10b4476f0e12543b851fa03eaca01e
-      internalID: -8290573086032589194
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Bot\xE3o aceso_5"
-      rect:
-        serializedVersion: 2
-        x: 589
-        y: 4
+        x: 874
+        y: 19
         width: 95
         height: 104
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb40db1abd6971d42a5cf4f9a55d0d75
-      internalID: -5890103046313536531
+      spriteID: 75da35b657f535f44bdd5f0d4b94fab4
+      internalID: 2441913725993928643
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Bot\xE3o aceso_6"
+      name: "bot\xE3o aceso_new_7"
       rect:
         serializedVersion: 2
-        x: 702
-        y: 4
+        x: 1015
+        y: 19
+        width: 96
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40f44a7c95fa1a1419e43f61ba8c291e
+      internalID: 6737362174802672419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "bot\xE3o aceso_new_8"
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 19
         width: 95
         height: 104
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29efa6cd3b602e340991dc4d034ee7e7
-      internalID: 7410722483315097431
+      spriteID: a1bcd3aa3300b4f40a72ed2c4e0ff7c6
+      internalID: 173185989217130840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Bot\xE3o aceso_7"
+      name: "bot\xE3o aceso_new_9"
       rect:
         serializedVersion: 2
-        x: 816
-        y: 5
-        width: 95
-        height: 103
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7779e6a6193f64409bd1386913e1e25
-      internalID: -7154092668056770143
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Bot\xE3o aceso_8"
-      rect:
-        serializedVersion: 2
-        x: 929
-        y: 4
+        x: 1299
+        y: 19
         width: 95
         height: 104
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42ceedcab5b8d62468bca1bbd40bc6e0
-      internalID: 3821032481878883269
+      spriteID: fcffe938cd28b5b43afebf7b25310e42
+      internalID: 5234704682534943453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Bot\xE3o aceso_9"
+      name: "bot\xE3o aceso_new_10"
       rect:
         serializedVersion: 2
-        x: 1043
-        y: 4
+        x: 1441
+        y: 19
         width: 95
         height: 104
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95c08849a3a8ed84cab2ad49d173562e
-      internalID: 525090498735047715
+      spriteID: 2eb4445391dd59e44abd83af8ef9fe7e
+      internalID: -4499361026508915224
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Bot\xE3o aceso_10"
+      name: "bot\xE3o aceso_new_11"
       rect:
         serializedVersion: 2
-        x: 1156
-        y: 5
+        x: 1582
+        y: 19
         width: 95
         height: 104
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbc1834bd7f835247a7fc6166f81626f
-      internalID: -5308099777414702505
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Bot\xE3o aceso_11"
-      rect:
-        serializedVersion: 2
-        x: 1269
-        y: 4
-        width: 95
-        height: 104
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f655b3d8c87665a499a6fbd2ff652b0a
-      internalID: 4447304904168371832
+      spriteID: 70a5b1de3bd397e46b145d442eb3211d
+      internalID: -238465787007760247
       vertices: []
       indices: 
       edges: []
