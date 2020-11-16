@@ -43,7 +43,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.9960785, g: 0.59607846, b: 0.37254903, a: 2}
+  m_BackGroundColor: {r: 0, g: 0.4, b: 1, a: 2}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -102,6 +102,6 @@ MonoBehaviour:
   FieldLabel: {fileID: 0}
   FieldCamera: {fileID: 5017908593991329932}
   UseColorPalette: 1
-  ColorPaletteIndex: 3
-  CurrentColor: {r: 0.9960785, g: 0.59607846, b: 0.37254903, a: 2}
-  PaletteName: Mountains
+  ColorPaletteIndex: 2
+  CurrentColor: {r: 0, g: 0.4, b: 1, a: 2}
+  PaletteName: Background
