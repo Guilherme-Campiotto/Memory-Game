@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,6 +10,8 @@ public class Menu : MonoBehaviour
     public Text level;
     public SoundController soundController;
     public GameController gameController;
+    public ColorPaletteComponent colorPaletteCanvas;
+    public ColorPaletteComponent colorPaletteCamera;
     int levelNumber;
 
     public GameObject btnRestart;
@@ -21,7 +24,8 @@ public class Menu : MonoBehaviour
 
         GameObject soundObject = GameObject.Find("SoundController");
         GameObject gameControllerObject = GameObject.Find("GameController");
-
+        GameObject colorPaletteCanvasObject = GameObject.Find("[UI_Image]");
+        GameObject colorPaletteCameraObject = GameObject.Find("Main Camera");
 
         if (soundObject != null)
         {
@@ -33,6 +37,20 @@ public class Menu : MonoBehaviour
             gameController = gameControllerObject.GetComponent<GameController>();
         }
 
+        if(colorPaletteCanvasObject != null)
+        {
+            colorPaletteCanvas = colorPaletteCanvasObject.GetComponent<ColorPaletteComponent>();
+
+            GenerateRandomBangroundColor(colorPaletteCanvas);
+        }
+
+        if (colorPaletteCameraObject != null)
+        {
+            colorPaletteCamera = colorPaletteCameraObject.GetComponent<ColorPaletteComponent>();
+
+            GenerateRandomBangroundColor(colorPaletteCamera);
+        }
+
         if (level != null)
         {
             level.text = level.text + levelNumber;
@@ -40,13 +58,9 @@ public class Menu : MonoBehaviour
 
         btnRestart.SetActive(false);
         btnNext.SetActive(false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
 
     }
+
     public void PlayNextSound()
     {
         if(soundController != null)
@@ -87,5 +101,16 @@ public class Menu : MonoBehaviour
     {
         bool active = btnNext.activeSelf;
         btnNext.SetActive(!active);
+    }
+    void GenerateRandomBangroundColor(ColorPaletteComponent colorPalette)
+    {
+        colorPalette.ColorPaletteIndex = Random.Range(0, ColorPaletteComponent.CurrentPaletteData.ColorList.Count);
+        colorPalette.OnRefreshColorPalette();
+    }
+
+    public void ChangeBackground()
+    {
+        GenerateRandomBangroundColor(colorPaletteCanvas);
+        GenerateRandomBangroundColor(colorPaletteCamera);
     }
 }

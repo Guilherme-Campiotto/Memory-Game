@@ -2303,6 +2303,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Global Light 2D
       objectReference: {fileID: 0}
+    - target: {fileID: 7355107526754756862, guid: 42488620e74ee9d4b8b0168230f19957,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 7355107526754756863, guid: 42488620e74ee9d4b8b0168230f19957,
         type: 3}
       propertyPath: m_LocalPosition.x
