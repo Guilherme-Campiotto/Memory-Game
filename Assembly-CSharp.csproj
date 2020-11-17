@@ -79,6 +79,7 @@
     <Compile Include="Assets\Minimal Puzzle 2D\Scripts\MinimalPuzzle2D\MinimalPuzzle2DWindow.cs" />
     <Compile Include="Assets\Scripts\ButtonGame.cs" />
     <Compile Include="Assets\Scripts\ButtonsToPlay.cs" />
+    <Compile Include="Assets\Scripts\GameConfiguration.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\LightCustom.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />

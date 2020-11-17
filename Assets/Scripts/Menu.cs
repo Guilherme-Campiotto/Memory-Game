@@ -17,7 +17,6 @@ public class Menu : MonoBehaviour
     public GameObject btnRestart;
     public GameObject btnNext;
 
-    // Start is called before the first frame update
     void Start()
     {
         levelNumber = SceneManager.GetActiveScene().buildIndex + 1;
@@ -37,18 +36,21 @@ public class Menu : MonoBehaviour
             gameController = gameControllerObject.GetComponent<GameController>();
         }
 
-        if(colorPaletteCanvasObject != null)
+        if(!GameConfiguration.fixedBackground)
         {
-            colorPaletteCanvas = colorPaletteCanvasObject.GetComponent<ColorPaletteComponent>();
+            if(colorPaletteCanvasObject != null)
+            {
+                colorPaletteCanvas = colorPaletteCanvasObject.GetComponent<ColorPaletteComponent>();
 
-            GenerateRandomBangroundColor(colorPaletteCanvas);
-        }
+                GenerateRandomBangroundColor(colorPaletteCanvas);
+            }
 
-        if (colorPaletteCameraObject != null)
-        {
-            colorPaletteCamera = colorPaletteCameraObject.GetComponent<ColorPaletteComponent>();
+            if (colorPaletteCameraObject != null)
+            {
+                colorPaletteCamera = colorPaletteCameraObject.GetComponent<ColorPaletteComponent>();
 
-            GenerateRandomBangroundColor(colorPaletteCamera);
+                GenerateRandomBangroundColor(colorPaletteCamera);
+            }
         }
 
         if (level != null)
@@ -56,8 +58,8 @@ public class Menu : MonoBehaviour
             level.text = level.text + levelNumber;
         }
 
-        btnRestart.SetActive(false);
-        btnNext.SetActive(false);
+        if(btnRestart != null) btnRestart.SetActive(false);
+        if (btnNext != null) btnNext.SetActive(false);
 
     }
 
@@ -104,13 +106,34 @@ public class Menu : MonoBehaviour
     }
     void GenerateRandomBangroundColor(ColorPaletteComponent colorPalette)
     {
-        colorPalette.ColorPaletteIndex = Random.Range(0, ColorPaletteComponent.CurrentPaletteData.ColorList.Count);
-        colorPalette.OnRefreshColorPalette();
+        if(colorPalette != null)
+        {
+            colorPalette.ColorPaletteIndex = Random.Range(0, ColorPaletteComponent.CurrentPaletteData.ColorList.Count);
+            colorPalette.OnRefreshColorPalette();
+        }
+
     }
 
     public void ChangeBackground()
     {
+        GameConfiguration.fixedBackground = true;
         GenerateRandomBangroundColor(colorPaletteCanvas);
         GenerateRandomBangroundColor(colorPaletteCamera);
+    }
+
+    public void OpenLevelSelectMenu()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void OpenLevelSelected()
+    {
+        // mudar depois para ficar dinamico e funcionar em qualquer fase
+        SceneManager.LoadScene(2);
+    }
+
+    public void OpenCredits()
+    {
+
     }
 }
