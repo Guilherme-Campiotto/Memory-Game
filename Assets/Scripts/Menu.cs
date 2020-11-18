@@ -107,11 +107,17 @@ public class Menu : MonoBehaviour
     }
     void GenerateRandomBackgroundColorCamera()
     {
-        camera.backgroundColor = GameConfiguration.colorsList[Random.Range(0, GameConfiguration.colorsList.Count)];
+        if(camera != null)
+        {
+            camera.backgroundColor = GameConfiguration.colorsList[Random.Range(0, GameConfiguration.colorsList.Count)];
+        }
     }
     void GenerateRandomBackgroundColorCanvasImage()
     {
-        canvasImage.color = GameConfiguration.colorsList[Random.Range(0, GameConfiguration.colorsList.Count)];
+        if(canvasImage != null)
+        {
+            canvasImage.color = GameConfiguration.colorsList[Random.Range(0, GameConfiguration.colorsList.Count)];
+        }
     }
 
     public void ChangeBackground()

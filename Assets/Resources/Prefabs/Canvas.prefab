@@ -691,10 +691,10 @@ RectTransform:
   - {fileID: 1414040051431414650}
   - {fileID: 1414040052135054965}
   - {fileID: 1645998285}
+  - {fileID: 665001711146713443}
   - {fileID: 4387664473592141213}
   - {fileID: 7632169804985587079}
   - {fileID: 2671759580951986237}
-  - {fileID: 665001711146713443}
   - {fileID: 196256151}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -779,9 +779,8 @@ MonoBehaviour:
   level: {fileID: 1645998286}
   soundController: {fileID: 0}
   gameController: {fileID: 0}
-  colorPaletteCanvas: {fileID: 0}
-  colorPaletteCamera: {fileID: 0}
   camera: {fileID: 0}
+  canvasImage: {fileID: 0}
   btnRestart: {fileID: 1414040051431414653}
   btnNext: {fileID: 1414040052135054964}
   colorsList: []
@@ -1172,7 +1171,7 @@ RectTransform:
   m_LocalScale: {x: 0.43279, y: 0.43279, z: 0.43279}
   m_Children: []
   m_Father: {fileID: 1414040050373169239}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -1289,7 +1288,7 @@ RectTransform:
   m_LocalScale: {x: 0.43279, y: 0.43279, z: 0.43279}
   m_Children: []
   m_Father: {fileID: 1414040050373169239}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -1417,7 +1416,7 @@ RectTransform:
   m_LocalScale: {x: 0.43279, y: 0.43279, z: 0.43279}
   m_Children: []
   m_Father: {fileID: 1414040050373169239}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -1545,7 +1544,7 @@ RectTransform:
   m_LocalScale: {x: 0.43279, y: 0.43279, z: 0.43279}
   m_Children: []
   m_Father: {fileID: 1414040050373169239}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
