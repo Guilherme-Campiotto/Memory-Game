@@ -10,21 +10,23 @@ public class Menu : MonoBehaviour
     public Text level;
     public SoundController soundController;
     public GameController gameController;
-    public ColorPaletteComponent colorPaletteCanvas;
-    public ColorPaletteComponent colorPaletteCamera;
+    public Camera camera;
+    public Image canvasImage;
     int levelNumber;
 
     public GameObject btnRestart;
     public GameObject btnNext;
 
+    public List<Color> colorsList;
+
     void Start()
     {
-        levelNumber = SceneManager.GetActiveScene().buildIndex + 1;
+        levelNumber = SceneManager.GetActiveScene().buildIndex - 1;
 
         GameObject soundObject = GameObject.Find("SoundController");
         GameObject gameControllerObject = GameObject.Find("GameController");
-        GameObject colorPaletteCanvasObject = GameObject.Find("[UI_Image]");
-        GameObject colorPaletteCameraObject = GameObject.Find("Main Camera");
+        GameObject imageCanvasObject = GameObject.Find("[UI_Image]");
+        GameObject cameraObject = GameObject.Find("Main Camera");
 
         if (soundObject != null)
         {
@@ -36,21 +38,20 @@ public class Menu : MonoBehaviour
             gameController = gameControllerObject.GetComponent<GameController>();
         }
 
-        if(!GameConfiguration.fixedBackground)
+        if (imageCanvasObject != null)
         {
-            if(colorPaletteCanvasObject != null)
-            {
-                colorPaletteCanvas = colorPaletteCanvasObject.GetComponent<ColorPaletteComponent>();
+            canvasImage = imageCanvasObject.GetComponent<Image>();
+        }
 
-                GenerateRandomBangroundColor(colorPaletteCanvas);
-            }
+        if (cameraObject != null)
+        {
+            camera = cameraObject.GetComponent<Camera>();
+        }
 
-            if (colorPaletteCameraObject != null)
-            {
-                colorPaletteCamera = colorPaletteCameraObject.GetComponent<ColorPaletteComponent>();
-
-                GenerateRandomBangroundColor(colorPaletteCamera);
-            }
+        if (!GameConfiguration.fixedBackground)
+        {
+            GenerateRandomBackgroundColorCanvasImage();
+            GenerateRandomBackgroundColorCamera();
         }
 
         if (level != null)
@@ -104,21 +105,20 @@ public class Menu : MonoBehaviour
         bool active = btnNext.activeSelf;
         btnNext.SetActive(!active);
     }
-    void GenerateRandomBangroundColor(ColorPaletteComponent colorPalette)
+    void GenerateRandomBackgroundColorCamera()
     {
-        if(colorPalette != null)
-        {
-            colorPalette.ColorPaletteIndex = Random.Range(0, ColorPaletteComponent.CurrentPaletteData.ColorList.Count);
-            colorPalette.OnRefreshColorPalette();
-        }
-
+        camera.backgroundColor = GameConfiguration.colorsList[Random.Range(0, GameConfiguration.colorsList.Count)];
+    }
+    void GenerateRandomBackgroundColorCanvasImage()
+    {
+        canvasImage.color = GameConfiguration.colorsList[Random.Range(0, GameConfiguration.colorsList.Count)];
     }
 
     public void ChangeBackground()
     {
         GameConfiguration.fixedBackground = true;
-        GenerateRandomBangroundColor(colorPaletteCanvas);
-        GenerateRandomBangroundColor(colorPaletteCamera);
+        GenerateRandomBackgroundColorCamera();
+        GenerateRandomBackgroundColorCanvasImage();
     }
 
     public void OpenLevelSelectMenu()
@@ -136,4 +136,5 @@ public class Menu : MonoBehaviour
     {
 
     }
+
 }
