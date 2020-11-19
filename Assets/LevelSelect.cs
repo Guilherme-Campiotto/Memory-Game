@@ -19,7 +19,6 @@ public class LevelSelect : MonoBehaviour
         SetStageButtons();
 
         //PlayerPrefs.DeleteKey("PlayerProgress"); // apaga o progresso
-
         SetButtonPreSelected("ButtonIntro");
     }
 

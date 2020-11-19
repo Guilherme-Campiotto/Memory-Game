@@ -176,13 +176,8 @@ public class GameController : MonoBehaviour
 
     public void SaveGame(int level)
     {
-        PlayerPrefs.SetInt("currentLevel", level);
+        PlayerPrefs.SetInt("PlayerProgress", level);
     }
 
-    public int LoadGame()
-    {
-        int currentLevel = PlayerPrefs.GetInt("currentLevel");
-        return currentLevel;
-    }
 }
 

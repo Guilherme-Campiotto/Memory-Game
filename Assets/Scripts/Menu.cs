@@ -132,7 +132,7 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    public void OpenLastPlayedLevel()
+    public void LoadGame()
     {
         int playerCurrentScene = PlayerPrefs.GetInt("PlayerProgress");
 
