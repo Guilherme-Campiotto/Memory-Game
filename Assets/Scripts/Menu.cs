@@ -132,10 +132,17 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    public void OpenLevelSelected()
+    public void OpenLastPlayedLevel()
     {
-        // mudar depois para ficar dinamico e funcionar em qualquer fase
-        SceneManager.LoadScene(2);
+        int playerCurrentScene = PlayerPrefs.GetInt("PlayerProgress");
+
+        if (playerCurrentScene == 0)
+        {
+            playerCurrentScene = 2;
+            PlayerPrefs.SetInt("PlayerProgress", playerCurrentScene);
+        }
+
+        SceneManager.LoadScene(playerCurrentScene);
     }
 
     public void OpenCredits()

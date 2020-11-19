@@ -417,9 +417,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1003347275, guid: c6febbf346f030a4b9596d3e1eddc4ab, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -57.69995
+    - target: {fileID: 1880921682105139769, guid: c6febbf346f030a4b9596d3e1eddc4ab,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenLastPlayedLevel
       objectReference: {fileID: 0}
     - target: {fileID: 8590017768095049987, guid: c6febbf346f030a4b9596d3e1eddc4ab,
         type: 3}

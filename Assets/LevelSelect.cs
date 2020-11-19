@@ -8,11 +8,10 @@ public class LevelSelect : MonoBehaviour
 {
     public List<Button> listButtons;
     public List<Image> listImagesLocked;
-    public GameObject panelPageOne;
-    public GameObject panelPageTwo;
+    //public GameObject panelPageOne;
+    //public GameObject panelPageTwo;
     private int playerCurrentScene;
 
-    // Start is called before the first frame update
     void Start()
     {
         GetPlayerProgress();
@@ -68,23 +67,23 @@ public class LevelSelect : MonoBehaviour
         }
     }
 
-    public void NextPage()
+    /*public void NextPage()
     {
         panelPageOne.SetActive(false);
         panelPageTwo.SetActive(true);
 
         SetButtonPreSelected("Button (24)");
 
-    }
+    }*/
 
-    public void PreviosPage()
+    /*public void PreviosPage()
     {
         panelPageOne.SetActive(true);
         panelPageTwo.SetActive(false);
 
         SetButtonPreSelected("ButtonIntro");
 
-    }
+    }*/
 
     void SetButtonPreSelected(string buttonName)
     {
