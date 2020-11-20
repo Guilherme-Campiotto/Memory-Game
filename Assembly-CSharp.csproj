@@ -67,8 +67,6 @@
     <Compile Include="Assets\Color Palette\Scripts\ColorPaletteComponent.cs" />
     <Compile Include="Assets\Color Palette\Scripts\ColorPaletteCustomData.cs" />
     <Compile Include="Assets\Color Palette\Scripts\ColorPaletteWindow.cs" />
-    <Compile Include="Assets\DebugMode.cs" />
-    <Compile Include="Assets\LevelSelect.cs" />
     <Compile Include="Assets\Minimal Puzzle 2D\Demo\Scripts\General\AudioManager.cs" />
     <Compile Include="Assets\Minimal Puzzle 2D\Demo\Scripts\UI\UI.cs" />
     <Compile Include="Assets\Minimal Puzzle 2D\Demo\Scripts\UI\UI_AudioComponent.cs" />
@@ -80,8 +78,10 @@
     <Compile Include="Assets\Minimal Puzzle 2D\Scripts\MinimalPuzzle2D\MinimalPuzzle2DWindow.cs" />
     <Compile Include="Assets\Scripts\ButtonGame.cs" />
     <Compile Include="Assets\Scripts\ButtonsToPlay.cs" />
+    <Compile Include="Assets\Scripts\DebugMode.cs" />
     <Compile Include="Assets\Scripts\GameConfiguration.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\LevelSelect.cs" />
     <Compile Include="Assets\Scripts\LightCustom.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\SoundController.cs" />

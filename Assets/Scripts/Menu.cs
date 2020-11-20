@@ -22,6 +22,8 @@ public class Menu : MonoBehaviour
     public AudioClip menuClick2;
     public AudioClip menuClick3;
 
+    public Animator creditsAnimator;
+
     void Start()
     {
         levelNumber = SceneManager.GetActiveScene().buildIndex - 1;
@@ -167,6 +169,13 @@ public class Menu : MonoBehaviour
     public void OpenCredits()
     {
         soundController.PlayAudioOnce(menuClick, 1);
+        creditsAnimator.SetBool("ShowPanel", true);
+    }
+
+    public void CloseCredits()
+    {
+        soundController.PlayAudioOnce(menuClick, 1);
+        creditsAnimator.SetBool("ShowPanel", false);
     }
 
 }
