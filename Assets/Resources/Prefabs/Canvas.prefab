@@ -781,6 +781,9 @@ MonoBehaviour:
   btnRestart: {fileID: 1414040051431414653}
   btnNext: {fileID: 1414040052135054964}
   colorsList: []
+  menuClick: {fileID: 8300000, guid: efe2eab0acab493419dfb6a7f42299f0, type: 3}
+  menuClick2: {fileID: 8300000, guid: 69d4c8d4ac6cee44aa98ecb3f73307c3, type: 3}
+  menuClick3: {fileID: 8300000, guid: 5609c78ecf7e4db4f93f8cda644aefd2, type: 3}
 --- !u!114 &649527740
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -196,7 +196,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7253735816177989755}
-        m_MethodName: OpenLevelSelectMenu
+        m_MethodName: LoadGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1802,6 +1802,9 @@ MonoBehaviour:
   btnRestart: {fileID: 0}
   btnNext: {fileID: 8590017766602127148}
   colorsList: []
+  menuClick: {fileID: 8300000, guid: efe2eab0acab493419dfb6a7f42299f0, type: 3}
+  menuClick2: {fileID: 8300000, guid: 69d4c8d4ac6cee44aa98ecb3f73307c3, type: 3}
+  menuClick3: {fileID: 8300000, guid: 5609c78ecf7e4db4f93f8cda644aefd2, type: 3}
 --- !u!114 &7253735815267055844
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour
 
     AudioClip buttonRightSound;
     AudioClip levelCompleteSound;
+    AudioClip starsRevealed;
 
     public int currentLevel;
 
@@ -27,6 +28,7 @@ public class GameController : MonoBehaviour
     {
         buttonRightSound = Resources.Load<AudioClip>("Sound/Sound_Effects/Button_Click/coin_22");
         levelCompleteSound = Resources.Load<AudioClip>("Sound/Sound_Effects/power_up_18");
+        starsRevealed = Resources.Load<AudioClip>("Sound/Sound_Effects/star_3");
 
         StartCoroutine(ShowButtonsToPlay());
 
@@ -128,11 +130,9 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(timeToShowButtons);
         foreach (ButtonGame button in listButtons)
         {
-            //Debug.Log("Acendeu");
             button.GetComponent<SpriteRenderer>().sprite = button.buttonOnSprite;
             soundController.PlayAudioOnce(buttonRightSound);
             yield return new WaitForSeconds(timeToShowButtons);
-            //Debug.Log("Apagou");
             button.GetComponent<SpriteRenderer>().sprite = button.buttonOffSprite;
         }
 
@@ -163,6 +163,7 @@ public class GameController : MonoBehaviour
 
         HideButtons();
 
+        soundController.PlayAudioOnce(starsRevealed, 0.8f);
         menu.ChangeButtonNextVisibility();
     }
 

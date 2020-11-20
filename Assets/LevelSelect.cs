@@ -8,15 +8,22 @@ public class LevelSelect : MonoBehaviour
 {
     public List<Button> listButtons;
     public List<Image> listImagesLocked;
-    //public GameObject panelPageOne;
-    //public GameObject panelPageTwo;
     private int playerCurrentScene;
+    public SoundController soundController;
+    public AudioClip menuClick3;
 
     void Start()
     {
         GetPlayerProgress();
         SetImagesLockedStage();
         SetStageButtons();
+
+        GameObject soundObject = GameObject.Find("SoundController");
+
+        if (soundObject != null)
+        {
+            soundController = soundObject.GetComponent<SoundController>();
+        }
 
         //PlayerPrefs.DeleteKey("PlayerProgress"); // apaga o progresso
         SetButtonPreSelected("ButtonIntro");
@@ -37,6 +44,7 @@ public class LevelSelect : MonoBehaviour
     {
         if (playerCurrentScene >= stageIndex)
         {
+            soundController.PlayAudioOnce(menuClick3, 0.8f);
             SceneManager.LoadScene(stageIndex);
         }
     }
@@ -65,15 +73,6 @@ public class LevelSelect : MonoBehaviour
             btnIndex++;
         }
     }
-
-    /*public void NextPage()
-    {
-        panelPageOne.SetActive(false);
-        panelPageTwo.SetActive(true);
-
-        SetButtonPreSelected("Button (24)");
-
-    }*/
 
     /*public void PreviosPage()
     {

@@ -338,6 +338,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 919111404, guid: 8cd6885b70f0abc488488e693b98ee0c, type: 3}
+      propertyPath: menuClick3
+      value: 
+      objectReference: {fileID: 8300000, guid: 5609c78ecf7e4db4f93f8cda644aefd2, type: 3}
     - target: {fileID: 28227692441041357, guid: 8cd6885b70f0abc488488e693b98ee0c,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -3233,6 +3237,21 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6365243395717441577, guid: 8cd6885b70f0abc488488e693b98ee0c,
+        type: 3}
+      propertyPath: menuClick
+      value: 
+      objectReference: {fileID: 8300000, guid: efe2eab0acab493419dfb6a7f42299f0, type: 3}
+    - target: {fileID: 6365243395717441577, guid: 8cd6885b70f0abc488488e693b98ee0c,
+        type: 3}
+      propertyPath: menuClick2
+      value: 
+      objectReference: {fileID: 8300000, guid: 69d4c8d4ac6cee44aa98ecb3f73307c3, type: 3}
+    - target: {fileID: 6365243395717441577, guid: 8cd6885b70f0abc488488e693b98ee0c,
+        type: 3}
+      propertyPath: menuClick3
+      value: 
+      objectReference: {fileID: 8300000, guid: 5609c78ecf7e4db4f93f8cda644aefd2, type: 3}
     - target: {fileID: 6778530368692923037, guid: 8cd6885b70f0abc488488e693b98ee0c,
         type: 3}
       propertyPath: m_AnchorMin.y

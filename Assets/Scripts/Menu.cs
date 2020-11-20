@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -18,6 +17,10 @@ public class Menu : MonoBehaviour
     public GameObject btnNext;
 
     public List<Color> colorsList;
+
+    public AudioClip menuClick;
+    public AudioClip menuClick2;
+    public AudioClip menuClick3;
 
     void Start()
     {
@@ -76,6 +79,7 @@ public class Menu : MonoBehaviour
                 soundController.numberOfCurrentSong = 0;
             }
 
+            soundController.PlayAudioOnce(menuClick2, 0.2f);
             soundController.PlayAudioOnce(soundController.soundtrack[soundController.numberOfCurrentSong], 0.8f);
             soundController.nextSongQueue = false;
         }
@@ -83,16 +87,19 @@ public class Menu : MonoBehaviour
 
     public void QuitGame()
     {
+        soundController.PlayAudioOnce(menuClick, 0.7f);
         Application.Quit();
     }
 
     public void RestartGame()
     {
+        soundController.PlayAudioOnce(menuClick2, 0.2f);
         gameController.ResetButtons();
     }
 
     public void NextLevel()
     {
+        soundController.PlayAudioOnce(menuClick2, 0.2f);
         gameController.NextLevel();
     }
     public void ChangeButtonRestartVisibility()
@@ -122,6 +129,7 @@ public class Menu : MonoBehaviour
 
     public void ChangeBackground()
     {
+        soundController.PlayAudioOnce(menuClick2, 0.2f);
         GameConfiguration.fixedBackground = true;
         GenerateRandomBackgroundColorCamera();
         GenerateRandomBackgroundColorCanvasImage();
@@ -129,6 +137,7 @@ public class Menu : MonoBehaviour
 
     public void OpenLevelSelectMenu()
     {
+        soundController.PlayAudioOnce(menuClick2, 0.2f);
         SceneManager.LoadScene(1);
     }
 
@@ -142,12 +151,22 @@ public class Menu : MonoBehaviour
             PlayerPrefs.SetInt("PlayerProgress", playerCurrentScene);
         }
 
-        SceneManager.LoadScene(playerCurrentScene);
+        soundController.PlayAudioOnce(menuClick, 1);
+
+        //SceneManager.LoadScene(playerCurrentScene);
+        StartCoroutine(LoadScene(playerCurrentScene));
+    }
+
+    IEnumerator LoadScene(int sceneIndex)
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(sceneIndex);
+
     }
 
     public void OpenCredits()
     {
-
+        soundController.PlayAudioOnce(menuClick, 1);
     }
 
 }
