@@ -14,4 +14,5 @@ public static class GameConfiguration
         new Color32(171, 61, 244, 255),
         new Color32(89, 70, 164, 255)
     };
+    public static bool soundOn = true;
 }

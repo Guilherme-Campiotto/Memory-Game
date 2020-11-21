@@ -24,6 +24,11 @@ public class Menu : MonoBehaviour
 
     public Animator creditsAnimator;
 
+    public Sprite soundOnSprite;
+    public Sprite soundOffSprite;
+    public Image imageCanvasSound;
+    public bool soundOn = true;
+
     void Start()
     {
         levelNumber = SceneManager.GetActiveScene().buildIndex - 1;
@@ -67,6 +72,7 @@ public class Menu : MonoBehaviour
         if(btnRestart != null) btnRestart.SetActive(false);
         if (btnNext != null) btnNext.SetActive(false);
 
+        if(imageCanvasSound != null) SetSpriteSound();
     }
 
     public void PlayNextSound()
@@ -176,6 +182,36 @@ public class Menu : MonoBehaviour
     {
         soundController.PlayAudioOnce(menuClick, 1);
         creditsAnimator.SetBool("ShowPanel", false);
+    }
+    
+    public void MuteUnmuteSound()
+    {
+
+        if (GameConfiguration.soundOn)
+        {
+            GameConfiguration.soundOn = false;
+            imageCanvasSound.sprite = soundOffSprite;
+
+        }
+        else
+        {
+            GameConfiguration.soundOn = true;
+            imageCanvasSound.sprite = soundOnSprite;
+        }
+
+        soundController.ChangeAudioStatus();
+    }
+    public void SetSpriteSound()
+    {
+        
+        if (GameConfiguration.soundOn)
+        {
+            imageCanvasSound.sprite = soundOnSprite;
+        }
+        else
+        {
+            imageCanvasSound.sprite = soundOffSprite;
+        }
     }
 
 }

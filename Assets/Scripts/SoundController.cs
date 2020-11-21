@@ -5,7 +5,6 @@ using UnityEngine;
 public class SoundController : MonoBehaviour
 {
     public AudioSource audioSource;
-
     public static SoundController instance { get; private set; } = null;
     public AudioClip[] soundtrack;
     public int numberOfSongs;
@@ -89,4 +88,8 @@ public class SoundController : MonoBehaviour
         audioSource.Play();
     }
 
+    public void ChangeAudioStatus()
+    {
+        audioSource.mute = !audioSource.mute;
+    }
 }
