@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -265,27 +265,6 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 1523294011}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1884176272 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 799474973, guid: c6febbf346f030a4b9596d3e1eddc4ab,
-    type: 3}
-  m_PrefabInstance: {fileID: 8590017767788723158}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1884176273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884176272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: -3}
-  m_UseGraphicAlpha: 1
 --- !u!1 &2097547448
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,86 +417,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 26215769, guid: c6febbf346f030a4b9596d3e1eddc4ab, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 965
+    - target: {fileID: 1738896260, guid: c6febbf346f030a4b9596d3e1eddc4ab, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 26215769, guid: c6febbf346f030a4b9596d3e1eddc4ab, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
+    - target: {fileID: 1738896260, guid: c6febbf346f030a4b9596d3e1eddc4ab, type: 3}
+      propertyPath: m_Color.g
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 464805112, guid: c6febbf346f030a4b9596d3e1eddc4ab, type: 3}
-      propertyPath: m_Name
-      value: ButtonPlay
+    - target: {fileID: 1738896260, guid: c6febbf346f030a4b9596d3e1eddc4ab, type: 3}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 464805113, guid: c6febbf346f030a4b9596d3e1eddc4ab, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.46892878
-      objectReference: {fileID: 0}
-    - target: {fileID: 464805113, guid: c6febbf346f030a4b9596d3e1eddc4ab, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.46892878
-      objectReference: {fileID: 0}
-    - target: {fileID: 464805113, guid: c6febbf346f030a4b9596d3e1eddc4ab, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.46892878
-      objectReference: {fileID: 0}
-    - target: {fileID: 799474974, guid: c6febbf346f030a4b9596d3e1eddc4ab, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.82
-      objectReference: {fileID: 0}
-    - target: {fileID: 799474974, guid: c6febbf346f030a4b9596d3e1eddc4ab, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.82
-      objectReference: {fileID: 0}
-    - target: {fileID: 799474974, guid: c6febbf346f030a4b9596d3e1eddc4ab, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.82
-      objectReference: {fileID: 0}
-    - target: {fileID: 799474975, guid: c6febbf346f030a4b9596d3e1eddc4ab, type: 3}
-      propertyPath: m_EffectColor.r
-      value: 0.6603774
-      objectReference: {fileID: 0}
-    - target: {fileID: 799474975, guid: c6febbf346f030a4b9596d3e1eddc4ab, type: 3}
-      propertyPath: m_EffectColor.g
-      value: 0.6603774
-      objectReference: {fileID: 0}
-    - target: {fileID: 799474975, guid: c6febbf346f030a4b9596d3e1eddc4ab, type: 3}
-      propertyPath: m_EffectColor.b
-      value: 0.6603774
-      objectReference: {fileID: 0}
-    - target: {fileID: 1372836822, guid: c6febbf346f030a4b9596d3e1eddc4ab, type: 3}
-      propertyPath: m_Name
-      value: ButtonQuit
-      objectReference: {fileID: 0}
-    - target: {fileID: 1372836823, guid: c6febbf346f030a4b9596d3e1eddc4ab, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.4689288
-      objectReference: {fileID: 0}
-    - target: {fileID: 1372836823, guid: c6febbf346f030a4b9596d3e1eddc4ab, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.4689288
-      objectReference: {fileID: 0}
-    - target: {fileID: 1475857543, guid: c6febbf346f030a4b9596d3e1eddc4ab, type: 3}
-      propertyPath: m_Name
-      value: PanelCreditsBackground
-      objectReference: {fileID: 0}
-    - target: {fileID: 2047658570, guid: c6febbf346f030a4b9596d3e1eddc4ab, type: 3}
-      propertyPath: m_Name
-      value: ButtonCredits
-      objectReference: {fileID: 0}
-    - target: {fileID: 2047658571, guid: c6febbf346f030a4b9596d3e1eddc4ab, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.4689288
-      objectReference: {fileID: 0}
-    - target: {fileID: 2047658571, guid: c6febbf346f030a4b9596d3e1eddc4ab, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.4689288
-      objectReference: {fileID: 0}
-    - target: {fileID: 7253735815988173006, guid: c6febbf346f030a4b9596d3e1eddc4ab,
+    - target: {fileID: 1880921682105139769, guid: c6febbf346f030a4b9596d3e1eddc4ab,
         type: 3}
-      propertyPath: m_Name
-      value: PanelDebug
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8590017768095049987, guid: c6febbf346f030a4b9596d3e1eddc4ab,
         type: 3}
