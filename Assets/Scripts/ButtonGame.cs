@@ -12,7 +12,7 @@ public class ButtonGame : MonoBehaviour
     public bool isMovingY = false;
     public float xPosition;
     public float spaceToMove;
-    public int yPosition;
+    public float yPosition;
     public float speedMovement = 5;
 
     public Sprite buttonOnSprite;
@@ -59,6 +59,19 @@ public class ButtonGame : MonoBehaviour
             if(xPosition >= spaceToMove)
             {
                 xPosition = 0;
+                speedMovement = speedMovement * -1;
+            }
+        }
+
+        if(isMovingY)
+        {
+            Vector3 targetVelocity = new Vector2(transform.position.x, transform.position.y + (speedMovement * Time.fixedDeltaTime));
+            transform.position = targetVelocity;
+            yPosition += Mathf.Abs(speedMovement * Time.fixedDeltaTime);
+
+            if (yPosition >= spaceToMove)
+            {
+                yPosition = 0;
                 speedMovement = speedMovement * -1;
             }
         }

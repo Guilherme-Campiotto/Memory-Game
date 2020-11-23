@@ -115,7 +115,7 @@ public class GameController : MonoBehaviour
         
         SaveGame(nextScene);
 
-        if (nextScene > 12)
+        if (nextScene > 16)
         {
             EndGame();
         }
