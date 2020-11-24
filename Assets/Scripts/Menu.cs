@@ -214,4 +214,9 @@ public class Menu : MonoBehaviour
         }
     }
 
+    public void OpenMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
 }
