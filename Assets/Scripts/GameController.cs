@@ -67,7 +67,6 @@ public class GameController : MonoBehaviour
             if(listButtons.Count - 1 == buttonExpected)
             {
                 //Debug.Log("Todos os botões pressionados, proxima fase...");
-
                 soundController.PlayAudioOnce(levelCompleteSound);
                 allowPlayerControl = false;
                 StartCoroutine(RevealStars());
@@ -127,13 +126,18 @@ public class GameController : MonoBehaviour
 
     IEnumerator ShowButtonsToPlay()
     {
+        Animator animatorBtn;
         yield return new WaitForSeconds(timeToShowButtons);
         foreach (ButtonGame button in listButtons)
         {
-            button.GetComponent<SpriteRenderer>().sprite = button.buttonOnSprite;
+            animatorBtn = button.GetComponent<Animator>();
+            animatorBtn.SetBool("ButtonOn", true);
+            animatorBtn.SetBool("ButtonOff", false);
+
             soundController.PlayAudioOnce(buttonRightSound);
             yield return new WaitForSeconds(timeToShowButtons);
-            button.GetComponent<SpriteRenderer>().sprite = button.buttonOffSprite;
+            animatorBtn.SetBool("ButtonOn", false);
+            animatorBtn.SetBool("ButtonOff", true);
         }
 
         allowPlayerControl = true;
@@ -141,8 +145,13 @@ public class GameController : MonoBehaviour
 
     public void ResetButtons()
     {
-        foreach(ButtonGame button in listButtonsComplete) {
-            button.GetComponent<SpriteRenderer>().sprite = button.buttonOffSprite;
+        Animator animatorBtn;
+        foreach (ButtonGame button in listButtonsComplete) {
+            animatorBtn = button.GetComponent<Animator>();
+            animatorBtn.SetBool("ButtonOn", false);
+            animatorBtn.SetBool("ButtonOff", true);
+            animatorBtn.SetBool("ButtonWrong", false);
+            animatorBtn.SetBool("ButtonWrongOrder", false);
             button.isClickable = true;
         }
 

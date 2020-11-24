@@ -19,6 +19,7 @@ public class ButtonGame : MonoBehaviour
     public Sprite buttonOffSprite;
     public Sprite buttonWrongRedSprite;
     public Sprite buttonWrongYellowSprite;
+    Animator animator;
 
     AudioClip buttonRightSound;
     AudioClip buttonWrongSound;
@@ -33,6 +34,7 @@ public class ButtonGame : MonoBehaviour
     {
         buttonRightSound = Resources.Load<AudioClip>("Sound/Sound_Effects/Button_Click/coin_22");
         buttonWrongSound = Resources.Load<AudioClip>("Sound/Sound_Effects/Button_Click/game_over_20");
+        animator = GetComponent<Animator>();
 
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
         debugMode = GameObject.Find("Canvas").GetComponent<DebugMode>();
@@ -85,16 +87,19 @@ public class ButtonGame : MonoBehaviour
             if (isButtonCorrect)
             {
                 soundController.PlayAudioOnce(buttonRightSound);
-                GetComponent<SpriteRenderer>().sprite = buttonOnSprite;
+                animator.SetBool("ButtonOn", true);
+                animator.SetBool("ButtonOff", false);
 
             } else
             {
                 if(gameController.isButtonPresssedWrongInsideList(gameObject.name))
                 {
-                    GetComponent<SpriteRenderer>().sprite = buttonWrongYellowSprite;
+                    animator.SetBool("ButtonOff", false);
+                    animator.SetBool("ButtonWrongOrder", true);
                 } else
                 {
-                    GetComponent<SpriteRenderer>().sprite = buttonWrongRedSprite;
+                    animator.SetBool("ButtonOff", false);
+                    animator.SetBool("ButtonWrong", true);
                 }
 
                 soundController.PlayAudioOnce(buttonWrongSound);

@@ -548,6 +548,16 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 169818002932943608, guid: be882f7e1e711fd40b3c8f4862758e81,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 169818002932943608, guid: be882f7e1e711fd40b3c8f4862758e81,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1.16
+      objectReference: {fileID: 0}
     - target: {fileID: 169818002932943612, guid: be882f7e1e711fd40b3c8f4862758e81,
         type: 3}
       propertyPath: m_Name
