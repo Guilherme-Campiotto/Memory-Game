@@ -15,10 +15,8 @@ public class ButtonGame : MonoBehaviour
     public float yPosition;
     public float speedMovement = 5;
 
-    public Sprite buttonOnSprite;
-    public Sprite buttonOffSprite;
-    public Sprite buttonWrongRedSprite;
-    public Sprite buttonWrongYellowSprite;
+    public Vector3 inicialPosition;
+
     Animator animator;
 
     AudioClip buttonRightSound;
@@ -32,6 +30,7 @@ public class ButtonGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        inicialPosition = transform.position;
         buttonRightSound = Resources.Load<AudioClip>("Sound/Sound_Effects/Button_Click/coin_22");
         buttonWrongSound = Resources.Load<AudioClip>("Sound/Sound_Effects/Button_Click/game_over_20");
         animator = GetComponent<Animator>();
@@ -111,5 +110,14 @@ public class ButtonGame : MonoBehaviour
 
             }
         }
+    }
+
+    public void ResetPosition()
+    {
+        transform.position = inicialPosition;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
     }
 }

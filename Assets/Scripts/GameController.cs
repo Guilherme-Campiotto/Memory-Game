@@ -153,6 +153,8 @@ public class GameController : MonoBehaviour
             animatorBtn.SetBool("ButtonWrong", false);
             animatorBtn.SetBool("ButtonWrongOrder", false);
             button.isClickable = true;
+            button.ResetPosition();
+            
         }
 
         buttonExpected = 0;
