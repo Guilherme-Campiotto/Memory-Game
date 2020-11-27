@@ -161,7 +161,6 @@ public class Menu : MonoBehaviour
 
         soundController.PlayAudioOnce(menuClick, 1);
 
-        //SceneManager.LoadScene(playerCurrentScene);
         StartCoroutine(LoadScene(playerCurrentScene));
     }
 

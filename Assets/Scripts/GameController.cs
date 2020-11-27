@@ -111,15 +111,14 @@ public class GameController : MonoBehaviour
     {
 
         int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
-        
-        SaveGame(nextScene);
 
-        if (nextScene > 21)
+        if (nextScene > 31)
         {
             EndGame();
         }
         else
         {
+            SaveGame(nextScene);
             SceneManager.LoadScene(nextScene);
         }
     }
