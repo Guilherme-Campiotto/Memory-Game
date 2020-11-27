@@ -14,6 +14,7 @@ public class ButtonGame : MonoBehaviour
     public float spaceToMove;
     public float yPosition;
     public float speedMovement = 5;
+    public bool fakeButton = false;
 
     public Vector3 inicialPosition;
 
@@ -26,8 +27,6 @@ public class ButtonGame : MonoBehaviour
     GameController gameController;
     DebugMode debugMode;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         inicialPosition = transform.position;
@@ -48,7 +47,6 @@ public class ButtonGame : MonoBehaviour
         soundController = soundObject.GetComponent<SoundController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(isMovingX)
@@ -91,7 +89,12 @@ public class ButtonGame : MonoBehaviour
 
             } else
             {
-                if(gameController.isButtonPresssedWrongInsideList(gameObject.name))
+                if(fakeButton == true)
+                {
+                    animator.SetBool("ButtonOff", false);
+                    animator.SetBool("ButtonWrong", true);
+                }
+                else if (gameController.isButtonPresssedWrongInsideList(gameObject.name))
                 {
                     animator.SetBool("ButtonOff", false);
                     animator.SetBool("ButtonWrongOrder", true);

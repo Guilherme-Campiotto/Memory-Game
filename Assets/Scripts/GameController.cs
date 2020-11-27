@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     public List<ButtonGame> listButtons;
     public List<ButtonGame> listButtonsComplete;
     public List<GameObject> listObjectsToReveal;
+    public List<ButtonGame> buttonsFiltered;
 
     public Camera mainCamera;
     public bool allowPlayerControl = false;
@@ -23,7 +24,6 @@ public class GameController : MonoBehaviour
 
     public int currentLevel;
 
-    // Start is called before the first frame update
     public void Start()
     {
         buttonRightSound = Resources.Load<AudioClip>("Sound/Sound_Effects/Button_Click/coin_22");
@@ -49,7 +49,6 @@ public class GameController : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     public void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
@@ -62,9 +61,9 @@ public class GameController : MonoBehaviour
     {
         //Debug.Log("Id do botão pressionado: " + bottonId);
         //Debug.Log("Id do botão esperado: " + buttonExpected);
-        if(listButtons[buttonExpected].gameObject.name == name)
+        if(buttonsFiltered[buttonExpected].gameObject.name == name)
         {
-            if(listButtons.Count - 1 == buttonExpected)
+            if(buttonsFiltered.Count - 1 == buttonExpected)
             {
                 //Debug.Log("Todos os botões pressionados, proxima fase...");
                 soundController.PlayAudioOnce(levelCompleteSound);
@@ -96,7 +95,7 @@ public class GameController : MonoBehaviour
     {
         bool isInsideList = false;
 
-        foreach(ButtonGame btn in listButtons)
+        foreach(ButtonGame btn in buttonsFiltered)
         {
             if(btn.gameObject.name.Equals(buttonName))
             {
@@ -130,15 +129,30 @@ public class GameController : MonoBehaviour
         foreach (ButtonGame button in listButtons)
         {
             animatorBtn = button.GetComponent<Animator>();
-            animatorBtn.SetBool("ButtonOn", true);
-            animatorBtn.SetBool("ButtonOff", false);
 
-            soundController.PlayAudioOnce(buttonRightSound);
-            yield return new WaitForSeconds(timeToShowButtons);
-            animatorBtn.SetBool("ButtonOn", false);
-            animatorBtn.SetBool("ButtonOff", true);
+            if(button.fakeButton)
+            {
+                animatorBtn.SetBool("ButtonOff", false);
+                animatorBtn.SetBool("ButtonWrong", true);
+
+                soundController.PlayAudioOnce(buttonRightSound);
+                yield return new WaitForSeconds(timeToShowButtons);
+                animatorBtn.SetBool("ButtonWrong", false);
+                animatorBtn.SetBool("ButtonOff", true);
+            } else
+            {
+                animatorBtn.SetBool("ButtonOn", true);
+                animatorBtn.SetBool("ButtonOff", false);
+
+                soundController.PlayAudioOnce(buttonRightSound);
+                yield return new WaitForSeconds(timeToShowButtons);
+                animatorBtn.SetBool("ButtonOn", false);
+                animatorBtn.SetBool("ButtonOff", true);
+            }
+
         }
 
+        RemoveFakeButtons();
         allowPlayerControl = true;
     }
 
@@ -188,6 +202,18 @@ public class GameController : MonoBehaviour
     public void SaveGame(int level)
     {
         PlayerPrefs.SetInt("PlayerProgress", level);
+    }
+
+    void RemoveFakeButtons()
+    {
+        buttonsFiltered = new List<ButtonGame>();
+        foreach (ButtonGame button in listButtons)
+        {
+            if (!button.fakeButton)
+            {
+                buttonsFiltered.Add(button);
+            }
+        }
     }
 
 }
