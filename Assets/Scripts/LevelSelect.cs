@@ -54,7 +54,7 @@ public class LevelSelect : MonoBehaviour
         int sceneIndex = 3;
         foreach (Image lockedImage in listImagesLocked)
         {
-            if (sceneIndex < playerCurrentScene)
+            if (sceneIndex <= playerCurrentScene)
             {
                 Destroy(lockedImage.gameObject);
             }

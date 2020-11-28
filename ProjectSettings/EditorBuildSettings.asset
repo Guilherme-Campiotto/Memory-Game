@@ -101,4 +101,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level30.unity
     guid: 8014969add6f04d4a8966a3de6a09b2a
+  - enabled: 1
+    path: Assets/Scenes/Level31.unity
+    guid: 02ac548a2a86d2945827e32791f7cd8f
+  - enabled: 1
+    path: Assets/Scenes/Level32.unity
+    guid: 22c4283c68bfd98478dd86f5d0f7f9ec
+  - enabled: 1
+    path: Assets/Scenes/Level33.unity
+    guid: 8f3089546fbd6e144b64abc5bd01a6f9
+  - enabled: 1
+    path: Assets/Scenes/Level34.unity
+    guid: 7a360b38c42531142b0d7b8b0fafb8e1
+  - enabled: 1
+    path: Assets/Scenes/Level35.unity
+    guid: 55d31a011a434354a88347d7dcd3ea56
+  - enabled: 1
+    path: Assets/Scenes/Level36.unity
+    guid: 59d6d4ee294746d44b206f051d1d4598
+  - enabled: 1
+    path: Assets/Scenes/Level37.unity
+    guid: 858e6189ea472c5418150ffd82907d1a
+  - enabled: 1
+    path: Assets/Scenes/Level38 - Taurus.unity
+    guid: d13ee66b021ee8e44818a227e6a4c681
+  - enabled: 1
+    path: Assets/Scenes/Level39.unity
+    guid: cf49a303cc5ed8e45a27ecf43452f06a
+  - enabled: 1
+    path: Assets/Scenes/Level40.unity
+    guid: 689b77af2add80d4cbf4f81ebefa29b1
   m_configObjects: {}
