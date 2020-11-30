@@ -153,6 +153,25 @@ public class GameController : MonoBehaviour
         }
 
         RemoveFakeButtons();
+        StartCoroutine(HideInvisibleButtons());
+    }
+
+    IEnumerator HideInvisibleButtons()
+    {
+        Animator animatorBtn;
+
+        foreach (ButtonGame button in listButtonsComplete)
+        {
+            animatorBtn = button.GetComponent<Animator>();
+            if (button.isInvisible)
+            {
+                animatorBtn.SetBool("Invisible", true);
+                animatorBtn.SetBool("ButtonOff", false);
+                yield return new WaitForSeconds(0.3f);
+            }
+
+        }
+
         allowPlayerControl = true;
     }
 
@@ -165,6 +184,7 @@ public class GameController : MonoBehaviour
             animatorBtn.SetBool("ButtonOff", true);
             animatorBtn.SetBool("ButtonWrong", false);
             animatorBtn.SetBool("ButtonWrongOrder", false);
+            animatorBtn.SetBool("Invisible", false);
             button.isClickable = true;
             button.ResetPosition();
             

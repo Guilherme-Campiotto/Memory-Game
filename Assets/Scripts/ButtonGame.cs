@@ -15,6 +15,7 @@ public class ButtonGame : MonoBehaviour
     public float yPosition;
     public float speedMovement = 5;
     public bool fakeButton = false;
+    public bool isInvisible = false;
 
     public Vector3 inicialPosition;
 
@@ -91,15 +92,18 @@ public class ButtonGame : MonoBehaviour
             {
                 if(fakeButton == true)
                 {
+                    animator.SetBool("Invisible", false);
                     animator.SetBool("ButtonOff", false);
                     animator.SetBool("ButtonWrong", true);
                 }
                 else if (gameController.isButtonPresssedWrongInsideList(gameObject.name))
                 {
+                    animator.SetBool("Invisible", false);
                     animator.SetBool("ButtonOff", false);
                     animator.SetBool("ButtonWrongOrder", true);
                 } else
                 {
+                    animator.SetBool("Invisible", false);
                     animator.SetBool("ButtonOff", false);
                     animator.SetBool("ButtonWrong", true);
                 }
