@@ -154,6 +154,7 @@ public class GameController : MonoBehaviour
 
         RemoveFakeButtons();
         StartCoroutine(HideInvisibleButtons());
+        TeleportButtons();
     }
 
     IEnumerator HideInvisibleButtons()
@@ -170,6 +171,21 @@ public class GameController : MonoBehaviour
                 yield return new WaitForSeconds(0.3f);
             }
 
+        }
+
+    }
+
+    void TeleportButtons()
+    {
+        Animator animatorBtn;
+
+        foreach (ButtonGame button in listButtonsComplete)
+        {
+            animatorBtn = button.GetComponent<Animator>();
+            if (button.canTeleport)
+            {
+                StartCoroutine(button.Teleport(animatorBtn));
+            }
         }
 
         allowPlayerControl = true;

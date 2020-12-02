@@ -168,7 +168,6 @@ public class Menu : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(sceneIndex);
-
     }
 
     public void OpenCredits()

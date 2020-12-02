@@ -85,6 +85,7 @@
     <Compile Include="Assets\Scripts\LightCustom.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\SoundController.cs" />
+    <Compile Include="Assets\Scripts\TeleportButton.cs" />
     <Compile Include="Assets\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
     <None Include="Assets\Minimal Puzzle 2D\Demo\Arts\Fonts\Montserrat\OFL.txt" />
     <Reference Include="Unity.Timeline.Editor">

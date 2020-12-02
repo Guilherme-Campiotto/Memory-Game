@@ -16,9 +16,15 @@ public class ButtonGame : MonoBehaviour
     public float speedMovement = 5;
     public bool fakeButton = false;
     public bool isInvisible = false;
+    public bool canTeleport = false;
+
+    public Transform destiny;
+    public AudioClip teleportClip;
 
     public Vector3 inicialPosition;
 
+    private float teleportSpeed = 1f;
+    
     Animator animator;
 
     AudioClip buttonRightSound;
@@ -33,6 +39,7 @@ public class ButtonGame : MonoBehaviour
         inicialPosition = transform.position;
         buttonRightSound = Resources.Load<AudioClip>("Sound/Sound_Effects/Button_Click/coin_22");
         buttonWrongSound = Resources.Load<AudioClip>("Sound/Sound_Effects/Button_Click/game_over_20");
+        teleportClip = Resources.Load<AudioClip>("Sound/Sound_Effects/teleport1");
         animator = GetComponent<Animator>();
 
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
@@ -45,7 +52,7 @@ public class ButtonGame : MonoBehaviour
             soundObject.SetActive(true);
         }
 
-        soundController = soundObject.GetComponent<SoundController>();
+            soundController = soundObject.GetComponent<SoundController>();
     }
 
     void Update()
@@ -127,4 +134,15 @@ public class ButtonGame : MonoBehaviour
     {
         Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
     }
+    public IEnumerator Teleport(Animator animator)
+    {
+        soundController.PlayAudioOnce(teleportClip);
+        animator.SetBool("Teleporting", true);
+        animator.SetBool("ButtonOff", false);
+        yield return new WaitForSeconds(teleportSpeed);
+        animator.SetBool("Teleporting", false);
+        animator.SetBool("ButtonOff", true);
+        transform.position = destiny.position;
+    }
+
 }
