@@ -18,7 +18,7 @@ public class ButtonGame : MonoBehaviour
     public bool isInvisible = false;
     public bool canTeleport = false;
 
-    public Transform destiny;
+    public GameObject destiny;
     public AudioClip teleportClip;
 
     public Vector3 inicialPosition;
@@ -139,10 +139,15 @@ public class ButtonGame : MonoBehaviour
         soundController.PlayAudioOnce(teleportClip);
         animator.SetBool("Teleporting", true);
         animator.SetBool("ButtonOff", false);
+
+        destiny.GetComponent<Animator>().SetBool("Teleporting", true);
+
         yield return new WaitForSeconds(teleportSpeed);
         animator.SetBool("Teleporting", false);
         animator.SetBool("ButtonOff", true);
-        transform.position = destiny.position;
+        destiny.GetComponent<Animator>().SetBool("Teleporting", false);
+
+        transform.position = destiny.GetComponent<Transform>().position;
     }
 
 }
