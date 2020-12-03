@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -28,7 +29,12 @@ public class Menu : MonoBehaviour
     public Sprite soundOffSprite;
     public Image imageCanvasSound;
     public bool soundOn = true;
+    public GameObject exitPanel;
 
+    private void Awake()
+    {
+        EventSystem.current.SetSelectedGameObject(gameObject);
+    }
     void Start()
     {
         levelNumber = SceneManager.GetActiveScene().buildIndex - 1;
@@ -73,6 +79,14 @@ public class Menu : MonoBehaviour
         if (btnNext != null) btnNext.SetActive(false);
 
         if(imageCanvasSound != null) SetSpriteSound();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            OpenCloseExitPanel();
+        }
     }
 
     public void PlayNextSound()
@@ -215,6 +229,16 @@ public class Menu : MonoBehaviour
     public void OpenMainMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void OpenCloseExitPanel()
+    {
+        exitPanel.SetActive(!exitPanel.activeSelf);
+    }
+
+    public void OnDeselect(BaseEventData eventData)
+    {
+        exitPanel.SetActive(false);
     }
 
 }

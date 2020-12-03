@@ -21,7 +21,7 @@ public class ButtonGame : MonoBehaviour
     public GameObject destiny;
     public AudioClip teleportClip;
 
-    public Vector3 inicialPosition;
+    private Vector3 inicialPosition;
 
     private float teleportSpeed = 1f;
     
@@ -130,10 +130,12 @@ public class ButtonGame : MonoBehaviour
     {
         transform.position = inicialPosition;
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
     }
+
     public IEnumerator Teleport(Animator animator)
     {
         soundController.PlayAudioOnce(teleportClip);
@@ -143,6 +145,7 @@ public class ButtonGame : MonoBehaviour
         destiny.GetComponent<Animator>().SetBool("Teleporting", true);
 
         yield return new WaitForSeconds(teleportSpeed);
+
         animator.SetBool("Teleporting", false);
         animator.SetBool("ButtonOff", true);
         destiny.GetComponent<Animator>().SetBool("Teleporting", false);

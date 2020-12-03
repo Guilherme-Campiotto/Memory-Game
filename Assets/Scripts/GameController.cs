@@ -51,10 +51,7 @@ public class GameController : MonoBehaviour
 
     public void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
+
     }
 
     public bool isButtonCorrect(string name)
@@ -111,7 +108,7 @@ public class GameController : MonoBehaviour
 
         int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
 
-        if (nextScene > 41)
+        if (nextScene > 60)
         {
             EndGame();
         }
@@ -154,7 +151,7 @@ public class GameController : MonoBehaviour
 
         RemoveFakeButtons();
         StartCoroutine(HideInvisibleButtons());
-        TeleportButtons();
+        StartCoroutine(TeleportButtons());
     }
 
     IEnumerator HideInvisibleButtons()
@@ -175,16 +172,17 @@ public class GameController : MonoBehaviour
 
     }
 
-    void TeleportButtons()
+    IEnumerator TeleportButtons()
     {
         Animator animatorBtn;
-
+        yield return new WaitForSeconds(0.3f);
         foreach (ButtonGame button in listButtonsComplete)
         {
             animatorBtn = button.GetComponent<Animator>();
             if (button.canTeleport)
             {
                 StartCoroutine(button.Teleport(animatorBtn));
+                yield return new WaitForSeconds(1f);
             }
         }
 
