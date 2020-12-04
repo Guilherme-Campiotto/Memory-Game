@@ -26,7 +26,6 @@ public class LevelSelect : MonoBehaviour
         }
 
         //PlayerPrefs.DeleteKey("PlayerProgress"); // apaga o progresso
-        SetButtonPreSelected("ButtonIntro");
     }
 
     void GetPlayerProgress()
@@ -71,24 +70,6 @@ public class LevelSelect : MonoBehaviour
             int currentIndex = btnIndex;
             button.onClick.AddListener(delegate { GoToStage(currentIndex); });
             btnIndex++;
-        }
-    }
-
-    /*public void PreviosPage()
-    {
-        panelPageOne.SetActive(true);
-        panelPageTwo.SetActive(false);
-
-        SetButtonPreSelected("ButtonIntro");
-
-    }*/
-
-    void SetButtonPreSelected(string buttonName)
-    {
-        GameObject FirstButton = GameObject.Find(buttonName);
-        if (FirstButton)
-        {
-            EventSystem.current.SetSelectedGameObject(FirstButton);
         }
     }
 

@@ -230,7 +230,12 @@ public class GameController : MonoBehaviour
 
     public void SaveGame(int level)
     {
-        PlayerPrefs.SetInt("PlayerProgress", level);
+        int levelSaved = PlayerPrefs.GetInt("PlayerProgress");
+
+        if(levelSaved < level)
+        {
+            PlayerPrefs.SetInt("PlayerProgress", level);
+        }
     }
 
     void RemoveFakeButtons()
