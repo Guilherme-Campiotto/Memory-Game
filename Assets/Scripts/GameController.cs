@@ -103,7 +103,7 @@ public class GameController : MonoBehaviour
 
         int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
 
-        if (nextScene > 60)
+        if (nextScene > 61)
         {
             EndGame();
         }
