@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -31,10 +30,6 @@ public class Menu : MonoBehaviour
     public bool soundOn = true;
     public GameObject exitPanel;
 
-    private void Awake()
-    {
-        EventSystem.current.SetSelectedGameObject(gameObject);
-    }
     void Start()
     {
         levelNumber = SceneManager.GetActiveScene().buildIndex - 1;
@@ -234,11 +229,6 @@ public class Menu : MonoBehaviour
     public void OpenCloseExitPanel()
     {
         exitPanel.SetActive(!exitPanel.activeSelf);
-    }
-
-    public void OnDeselect(BaseEventData eventData)
-    {
-        exitPanel.SetActive(false);
     }
 
 }

@@ -49,11 +49,6 @@ public class GameController : MonoBehaviour
 
     }
 
-    public void Update()
-    {
-
-    }
-
     public bool isButtonCorrect(string name)
     {
         //Debug.Log("Id do botão pressionado: " + bottonId);
