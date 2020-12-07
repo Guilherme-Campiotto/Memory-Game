@@ -23,6 +23,8 @@ public class GameController : MonoBehaviour
     AudioClip starsRevealed;
 
     public int currentLevel;
+    private GameObject steamAchievements;
+    SteamAchievements scriptAchievments;
 
     public void Start()
     {
@@ -46,6 +48,13 @@ public class GameController : MonoBehaviour
         }
 
         soundController = soundObject.GetComponent<SoundController>();
+
+        steamAchievements = GameObject.Find("SteamAchievements");
+
+        if (steamAchievements != null)
+        {
+            scriptAchievments = steamAchievements.GetComponent<SteamAchievements>();
+        }
 
     }
 
@@ -102,6 +111,62 @@ public class GameController : MonoBehaviour
     {
 
         int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+
+        if (scriptAchievments != null)
+        {
+            switch(SceneManager.GetActiveScene().buildIndex)
+            {
+                case 6:
+                    Debug.Log("Achievement 1/0: ");
+                    scriptAchievments.UnlockSteamAchievement("NEW_ACHIEVEMENT_1_0");
+                    break;
+                case 11:
+                    Debug.Log("Achievement 1/1: Zerar o jogo");
+                    scriptAchievments.UnlockSteamAchievement("NEW_ACHIEVEMENT_1_1");
+                    break;
+                case 16:
+                    Debug.Log("Achievement 1/2: Zerar o jogo");
+                    scriptAchievments.UnlockSteamAchievement("NEW_ACHIEVEMENT_1_2");
+                    break;
+                case 21:
+                    Debug.Log("Achievement 1/3: Zerar o jogo");
+                    scriptAchievments.UnlockSteamAchievement("NEW_ACHIEVEMENT_1_3");
+                    break;
+                case 26:
+                    Debug.Log("Achievement 1/4: Zerar o jogo");
+                    scriptAchievments.UnlockSteamAchievement("NEW_ACHIEVEMENT_1_4");
+                    break;
+                case 31:
+                    Debug.Log("Achievement 1/5: Zerar o jogo");
+                    scriptAchievments.UnlockSteamAchievement("NEW_ACHIEVEMENT_1_5");
+                    break;
+                case 36:
+                    Debug.Log("Achievement 1/6: Zerar o jogo");
+                    scriptAchievments.UnlockSteamAchievement("NEW_ACHIEVEMENT_1_6");
+                    break;
+                case 41:
+                    Debug.Log("Achievement 1/7: Zerar o jogo");
+                    scriptAchievments.UnlockSteamAchievement("NEW_ACHIEVEMENT_1_7");
+                    break;
+                case 46:
+                    Debug.Log("Achievement 1/8: Zerar o jogo");
+                    scriptAchievments.UnlockSteamAchievement("NEW_ACHIEVEMENT_1_8");
+                    break;
+                case 51:
+                    Debug.Log("Achievement 1/9: Zerar o jogo");
+                    scriptAchievments.UnlockSteamAchievement("NEW_ACHIEVEMENT_1_9");
+                    break;
+                case 56:
+                    Debug.Log("Achievement 1/10: Zerar o jogo");
+                    scriptAchievments.UnlockSteamAchievement("NEW_ACHIEVEMENT_1_10");
+                    break;
+                case 61:
+                    Debug.Log("Achievement 1/11: Zerar o jogo");
+                    scriptAchievments.UnlockSteamAchievement("NEW_ACHIEVEMENT_1_11");
+                    break;
+            }
+
+        }
 
         if (nextScene > 61)
         {
