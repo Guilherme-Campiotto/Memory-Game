@@ -168,7 +168,7 @@ public class GameController : MonoBehaviour
 
         }
 
-        if (nextScene > 61)
+        if (nextScene > 62)
         {
             EndGame();
         }
