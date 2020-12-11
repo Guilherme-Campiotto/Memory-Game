@@ -205,6 +205,7 @@ public class GameController : MonoBehaviour
                 yield return new WaitForSeconds(timeToShowButtons);
                 animatorBtn.SetBool("ButtonOn", false);
                 animatorBtn.SetBool("ButtonOff", true);
+                button.NormalizeLightButtonOff();
             }
 
         }
@@ -261,7 +262,8 @@ public class GameController : MonoBehaviour
             animatorBtn.SetBool("Invisible", false);
             button.isClickable = true;
             button.ResetPosition();
-            
+            button.NormalizeLightButtonOff();
+
         }
 
         buttonExpected = 0;

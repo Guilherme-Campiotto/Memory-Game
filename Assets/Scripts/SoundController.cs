@@ -5,6 +5,7 @@ using UnityEngine;
 public class SoundController : MonoBehaviour
 {
     public AudioSource audioSource;
+    public AudioSource audioSourceEffects;
     public static SoundController instance { get; private set; } = null;
     public AudioClip[] soundtrack;
     public int numberOfSongs;
@@ -39,7 +40,7 @@ public class SoundController : MonoBehaviour
         }
         else
         {
-            PlayAudioOnce(soundtrack[numberOfCurrentSong], 0.8f);
+            PlayMusicOnce(soundtrack[numberOfCurrentSong], 0.8f);
         }
 
     }
@@ -62,11 +63,16 @@ public class SoundController : MonoBehaviour
     {
         nextSongQueue = true;
         yield return new WaitForSeconds(timePlayNextSong);
-        PlayAudioOnce(soundtrack[numberOfCurrentSong], 0.8f);
+        PlayMusicOnce(soundtrack[numberOfCurrentSong], 0.8f);
         nextSongQueue = false;
     }
 
     public void PlayAudioOnce(AudioClip clip, float volume = 2f)
+    {
+        audioSourceEffects.PlayOneShot(clip, volume);
+    }
+
+    public void PlayMusicOnce(AudioClip clip, float volume = 2f)
     {
         audioSource.PlayOneShot(clip, volume);
     }
@@ -79,13 +85,6 @@ public class SoundController : MonoBehaviour
     public void PlayAudio()
     {
         audioSource.mute = false;
-    }
-
-    public void PlayWithLoop(AudioClip music)
-    {
-        audioSource.Stop();
-        audioSource.clip = music;
-        audioSource.Play();
     }
 
     public void ChangeAudioStatus()

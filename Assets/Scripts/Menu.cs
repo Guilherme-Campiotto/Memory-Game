@@ -30,6 +30,9 @@ public class Menu : MonoBehaviour
     public bool soundOn = true;
     public GameObject exitPanel;
 
+    public Animator soundConfigAnimator;
+    public bool isSoundConfigOpen = false;
+
     void Start()
     {
         levelNumber = SceneManager.GetActiveScene().buildIndex - 1;
@@ -229,6 +232,19 @@ public class Menu : MonoBehaviour
     public void OpenCloseExitPanel()
     {
         exitPanel.SetActive(!exitPanel.activeSelf);
+    }
+
+    public void OpenCloseSoundConfig()
+    {
+        if(isSoundConfigOpen)
+        {
+            soundConfigAnimator.Play("SoundConfigReverse");
+            isSoundConfigOpen = false;
+        } else
+        {
+            soundConfigAnimator.Play("SoundConfig");
+            isSoundConfigOpen = true;
+        }
     }
 
 }

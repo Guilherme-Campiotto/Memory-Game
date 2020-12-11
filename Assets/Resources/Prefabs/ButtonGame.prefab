@@ -48,7 +48,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.42352945, g: 0.5764706, b: 0.6, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.7
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -83,8 +83,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f9841c0e9a44b4194ba93be797d362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  magnitude: 0.5
+  magnitude: 1
   frequency: 1
+  startIntensity: 0
 --- !u!1 &169818002932943612
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,13 +190,13 @@ MonoBehaviour:
   spaceToMove: 0
   yPosition: 0
   speedMovement: 5
-  buttonOnSprite: {fileID: 4447304904168371832, guid: f4cc48f652e2bd141a3cfa901400e660,
-    type: 3}
-  buttonOffSprite: {fileID: 21300000, guid: d6d5b297aa53fcc418a4c63d0911849c, type: 3}
-  buttonWrongRedSprite: {fileID: -6080344963617704216, guid: d190d5db0113e1149ba0b1c3766a0ae7,
-    type: 3}
-  buttonWrongYellowSprite: {fileID: -7611439029266180085, guid: 252b8b8ac8e641d4bb0de69c28a99279,
-    type: 3}
+  fakeButton: 0
+  isInvisible: 0
+  canTeleport: 0
+  destiny: {fileID: 0}
+  teleportClip: {fileID: 0}
+  inicialSpeedMovement: 0
+  inicialLightIntensity: 0
 --- !u!61 &169818002932943608
 BoxCollider2D:
   m_ObjectHideFlags: 0

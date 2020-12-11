@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.LWRP;
 
 public class ButtonGame : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class ButtonGame : MonoBehaviour
     public AudioClip teleportClip;
 
     private Vector3 inicialPosition;
+    public float inicialSpeedMovement;
+    public float inicialLightIntensity;
 
     private float teleportSpeed = 1f;
     
@@ -37,6 +40,8 @@ public class ButtonGame : MonoBehaviour
     void Start()
     {
         inicialPosition = transform.position;
+        inicialSpeedMovement = speedMovement;
+        inicialLightIntensity = GetComponentInChildren<Light2D>().intensity;
         buttonRightSound = Resources.Load<AudioClip>("Sound/Sound_Effects/Button_Click/coin_22");
         buttonWrongSound = Resources.Load<AudioClip>("Sound/Sound_Effects/Button_Click/game_over_20");
         teleportClip = Resources.Load<AudioClip>("Sound/Sound_Effects/teleport1");
@@ -51,7 +56,6 @@ public class ButtonGame : MonoBehaviour
         {
             soundObject.SetActive(true);
         }
-
             soundController = soundObject.GetComponent<SoundController>();
     }
 
@@ -128,7 +132,10 @@ public class ButtonGame : MonoBehaviour
 
     public void ResetPosition()
     {
+        speedMovement = inicialSpeedMovement;
         transform.position = inicialPosition;
+        yPosition = 0;
+        xPosition = 0;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -151,6 +158,16 @@ public class ButtonGame : MonoBehaviour
         destiny.GetComponent<Animator>().SetBool("Teleporting", false);
 
         transform.position = destiny.GetComponent<Transform>().position;
+    }
+
+    public void IncreaseLightButtonPressed()
+    {
+        GetComponentInChildren<Light2D>().intensity = 2f;
+    }
+
+    public void NormalizeLightButtonOff()
+    {
+        GetComponentInChildren<Light2D>().intensity = inicialLightIntensity;
     }
 
 }
