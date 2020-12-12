@@ -28,6 +28,9 @@ public class GameController : MonoBehaviour
 
     public void Start()
     {
+        //QualitySettings.vSyncCount = 0;  // VSync must be disabled
+        //Application.targetFrameRate = 200; // test
+
         buttonRightSound = Resources.Load<AudioClip>("Sound/Sound_Effects/Button_Click/coin_22");
         levelCompleteSound = Resources.Load<AudioClip>("Sound/Sound_Effects/power_up_18");
         starsRevealed = Resources.Load<AudioClip>("Sound/Sound_Effects/star_3");

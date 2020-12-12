@@ -63,9 +63,9 @@ public class ButtonGame : MonoBehaviour
     {
         if(isMovingX)
         {
-            Vector3 targetVelocity = new Vector2(transform.position.x + (speedMovement * Time.fixedDeltaTime), transform.position.y);
+            Vector2 targetVelocity = new Vector2(transform.position.x + (speedMovement * Time.deltaTime), transform.position.y);
             transform.position = targetVelocity;
-            xPosition += Mathf.Abs(speedMovement * Time.fixedDeltaTime);
+            xPosition += Mathf.Abs(speedMovement * Time.deltaTime);
 
             if(xPosition >= spaceToMove)
             {
@@ -76,9 +76,9 @@ public class ButtonGame : MonoBehaviour
 
         if(isMovingY)
         {
-            Vector3 targetVelocity = new Vector2(transform.position.x, transform.position.y + (speedMovement * Time.fixedDeltaTime));
+            Vector2 targetVelocity = new Vector2(transform.position.x, transform.position.y + (speedMovement * Time.deltaTime));
             transform.position = targetVelocity;
-            yPosition += Mathf.Abs(speedMovement * Time.fixedDeltaTime);
+            yPosition += Mathf.Abs(speedMovement * Time.deltaTime);
 
             if (yPosition >= spaceToMove)
             {
