@@ -56,6 +56,8 @@ public class GameController : MonoBehaviour
             scriptAchievments = steamAchievements.GetComponent<SteamAchievements>();
         }
 
+        soundController.LoadGameVolume();
+
     }
 
     public bool isButtonCorrect(string name)

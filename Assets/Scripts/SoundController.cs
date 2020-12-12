@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SoundController : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class SoundController : MonoBehaviour
     public bool nextSongQueue = false;
     public float timePlayNextSong = 2f;
     string sound;
+
+    public Slider musicSlider;
+    public Slider soundEffectSlider;
 
     void Awake()
     {
@@ -33,15 +37,7 @@ public class SoundController : MonoBehaviour
     {
         numberOfSongs = soundtrack.Length - 1;
 
-        sound = PlayerPrefs.GetString("Sound");
-        if (sound == "Off")
-        {
-            audioSource.mute = true;
-        }
-        else
-        {
-            PlayMusicOnce(soundtrack[numberOfCurrentSong], 0.8f);
-        }
+        PlayMusicOnce(soundtrack[numberOfCurrentSong], 0.8f);
 
     }
 
@@ -90,5 +86,49 @@ public class SoundController : MonoBehaviour
     public void ChangeAudioStatus()
     {
         audioSource.mute = !audioSource.mute;
+    }
+
+    public void SetVolumeMusic(float volume)
+    {
+        PlayerPrefs.SetFloat("MusicVolume", volume);
+        audioSource.volume = volume;
+    }
+
+    public void SetVolumeSoundEffects(float volume)
+    {
+        PlayerPrefs.SetFloat("SoundEffectsVolume", volume);
+        audioSourceEffects.volume = volume;
+    }
+
+    public void LoadGameVolume()
+    {
+
+        musicSlider = GameObject.Find("SliderMusic").GetComponent<Slider>();
+        musicSlider.onValueChanged.AddListener(SetVolumeMusic);
+        soundEffectSlider = GameObject.Find("SliderSoundEffects").GetComponent<Slider>();
+        soundEffectSlider.onValueChanged.AddListener(SetVolumeSoundEffects);
+
+        if (PlayerPrefs.HasKey("MusicVolume"))
+        {
+            musicSlider.value = PlayerPrefs.GetFloat("MusicVolume");
+            audioSource.volume = PlayerPrefs.GetFloat("MusicVolume");
+        } else
+        {
+            musicSlider.value = 0.7f;
+            audioSource.volume = 0.7f;
+            PlayerPrefs.SetFloat("MusicVolume", 0.7f);
+        }
+
+        if (PlayerPrefs.HasKey("SoundEffectsVolume"))
+        {
+            soundEffectSlider.value = PlayerPrefs.GetFloat("SoundEffectsVolume");
+            audioSourceEffects.volume = PlayerPrefs.GetFloat("SoundEffectsVolume");
+        }
+        else
+        {
+            soundEffectSlider.value = 0.7f;
+            audioSourceEffects.volume = 0.7f;
+            PlayerPrefs.SetFloat("SoundEffectsVolume", 0.7f);
+        }
     }
 }

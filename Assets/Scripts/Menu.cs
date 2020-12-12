@@ -100,7 +100,7 @@ public class Menu : MonoBehaviour
             }
 
             soundController.PlayAudioOnce(menuClick2, 0.2f);
-            soundController.PlayAudioOnce(soundController.soundtrack[soundController.numberOfCurrentSong], 0.8f);
+            soundController.PlayMusicOnce(soundController.soundtrack[soundController.numberOfCurrentSong], 0.8f);
             soundController.nextSongQueue = false;
         }
     }
