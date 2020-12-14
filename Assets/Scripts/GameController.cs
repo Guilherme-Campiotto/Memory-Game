@@ -26,6 +26,8 @@ public class GameController : MonoBehaviour
     private GameObject steamAchievements;
     SteamAchievements scriptAchievments;
 
+    GameObject animationWonPrefab;
+
     public void Start()
     {
         //QualitySettings.vSyncCount = 0;  // VSync must be disabled
@@ -34,6 +36,7 @@ public class GameController : MonoBehaviour
         buttonRightSound = Resources.Load<AudioClip>("Sound/Sound_Effects/Button_Click/coin_22");
         levelCompleteSound = Resources.Load<AudioClip>("Sound/Sound_Effects/power_up_18");
         starsRevealed = Resources.Load<AudioClip>("Sound/Sound_Effects/star_3");
+        animationWonPrefab = Resources.Load<GameObject>("Prefabs/GameWonEffect");
 
         StartCoroutine(ShowButtonsToPlay());
 
@@ -280,6 +283,8 @@ public class GameController : MonoBehaviour
 
     IEnumerator RevealStars()
     {
+        StartCoroutine(PlayWonAnimation());
+
         foreach (GameObject objectToReveal in listObjectsToReveal)
         {
             objectToReveal.SetActive(true);
@@ -320,6 +325,23 @@ public class GameController : MonoBehaviour
                 buttonsFiltered.Add(button);
             }
         }
+    }
+
+    IEnumerator PlayWonAnimation()
+    {
+        Instantiate(animationWonPrefab, new Vector3(2.56f, 0.67f, 0f), Quaternion.identity);
+        yield return new WaitForSeconds(0.9f);
+        Instantiate(animationWonPrefab, new Vector3(Random.Range(-4f, 9.5f), Random.Range(-3f, 3.2f), 0f), Quaternion.identity);
+        yield return new WaitForSeconds(0.9f);
+        Instantiate(animationWonPrefab, new Vector3(Random.Range(-4f, 9.5f), Random.Range(-3f, 3.2f), 0f), Quaternion.identity);
+        yield return new WaitForSeconds(0.9f);
+        Instantiate(animationWonPrefab, new Vector3(Random.Range(-4f, 9.5f), Random.Range(-3f, 3.2f), 0f), Quaternion.identity);
+        yield return new WaitForSeconds(0.9f);
+        Instantiate(animationWonPrefab, new Vector3(Random.Range(-4f, 9.5f), Random.Range(-3f, 3.2f), 0f), Quaternion.identity);
+        yield return new WaitForSeconds(0.9f);
+        Instantiate(animationWonPrefab, new Vector3(Random.Range(-4f, 9.5f), Random.Range(-3f, 3.2f), 0f), Quaternion.identity);
+        yield return new WaitForSeconds(0.9f);
+        Instantiate(animationWonPrefab, new Vector3(Random.Range(-4f, 9.5f), Random.Range(-3f, 3.2f), 0f), Quaternion.identity);
     }
 
 }

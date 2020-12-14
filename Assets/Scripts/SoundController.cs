@@ -83,10 +83,10 @@ public class SoundController : MonoBehaviour
         audioSource.mute = false;
     }
 
-    public void ChangeAudioStatus()
+    /*public void ChangeAudioStatus()
     {
         audioSource.mute = !audioSource.mute;
-    }
+    }*/
 
     public void SetVolumeMusic(float volume)
     {

@@ -76,7 +76,7 @@ public class Menu : MonoBehaviour
         if(btnRestart != null) btnRestart.SetActive(false);
         if (btnNext != null) btnNext.SetActive(false);
 
-        if(imageCanvasSound != null) SetSpriteSound();
+        //if(imageCanvasSound != null) SetSpriteSound();
     }
 
     private void Update()
@@ -194,7 +194,7 @@ public class Menu : MonoBehaviour
         creditsAnimator.SetBool("ShowPanel", false);
     }
     
-    public void MuteUnmuteSound()
+    /*public void MuteUnmuteSound()
     {
 
         if (GameConfiguration.soundOn)
@@ -210,8 +210,9 @@ public class Menu : MonoBehaviour
         }
 
         soundController.ChangeAudioStatus();
-    }
-    public void SetSpriteSound()
+    }*/
+
+    /*public void SetSpriteSound()
     {
         
         if (GameConfiguration.soundOn)
@@ -222,7 +223,7 @@ public class Menu : MonoBehaviour
         {
             imageCanvasSound.sprite = soundOffSprite;
         }
-    }
+    }*/
 
     public void OpenMainMenu()
     {
