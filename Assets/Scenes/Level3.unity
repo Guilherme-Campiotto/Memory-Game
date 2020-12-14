@@ -1283,6 +1283,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 194003458, guid: e45baf7432e4a1343990e28d7b0f59f9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055044695, guid: e45baf7432e4a1343990e28d7b0f59f9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1178136386, guid: e45baf7432e4a1343990e28d7b0f59f9, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -1305,6 +1313,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1178136386, guid: e45baf7432e4a1343990e28d7b0f59f9, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1926680691, guid: e45baf7432e4a1343990e28d7b0f59f9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033660734, guid: e45baf7432e4a1343990e28d7b0f59f9, type: 3}
+      propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 665001711146713443, guid: e45baf7432e4a1343990e28d7b0f59f9,

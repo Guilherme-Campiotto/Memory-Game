@@ -821,6 +821,11 @@ PrefabInstance:
       propertyPath: listObjectsToReveal.Array.data[10]
       value: 
       objectReference: {fileID: 1080353634}
+    - target: {fileID: 8587671290789384315, guid: 9bd908812eb30614cb5a7083acdc3353,
+        type: 3}
+      propertyPath: timeToShowStars
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bd908812eb30614cb5a7083acdc3353, type: 3}
 --- !u!1001 &206726884
