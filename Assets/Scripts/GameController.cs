@@ -330,18 +330,12 @@ public class GameController : MonoBehaviour
     IEnumerator PlayWonAnimation()
     {
         Instantiate(animationWonPrefab, new Vector3(2.56f, 0.67f, 0f), Quaternion.identity);
-        yield return new WaitForSeconds(0.9f);
-        Instantiate(animationWonPrefab, new Vector3(Random.Range(-4f, 9.5f), Random.Range(-3f, 3.2f), 0f), Quaternion.identity);
-        yield return new WaitForSeconds(0.9f);
-        Instantiate(animationWonPrefab, new Vector3(Random.Range(-4f, 9.5f), Random.Range(-3f, 3.2f), 0f), Quaternion.identity);
-        yield return new WaitForSeconds(0.9f);
-        Instantiate(animationWonPrefab, new Vector3(Random.Range(-4f, 9.5f), Random.Range(-3f, 3.2f), 0f), Quaternion.identity);
-        yield return new WaitForSeconds(0.9f);
-        Instantiate(animationWonPrefab, new Vector3(Random.Range(-4f, 9.5f), Random.Range(-3f, 3.2f), 0f), Quaternion.identity);
-        yield return new WaitForSeconds(0.9f);
-        Instantiate(animationWonPrefab, new Vector3(Random.Range(-4f, 9.5f), Random.Range(-3f, 3.2f), 0f), Quaternion.identity);
-        yield return new WaitForSeconds(0.9f);
-        Instantiate(animationWonPrefab, new Vector3(Random.Range(-4f, 9.5f), Random.Range(-3f, 3.2f), 0f), Quaternion.identity);
+
+        for(int i = 0; i < 7; i++)
+        {
+            yield return new WaitForSeconds(0.9f);
+            Instantiate(animationWonPrefab, new Vector3(Random.Range(-4f, 9.5f), Random.Range(-3f, 3.2f), 0f), Quaternion.identity);
+        }
     }
 
 }

@@ -73,64 +73,64 @@ EditorBuildSettings:
     guid: 04a4ac871e4806a4282e5443a56bbfe0
   - enabled: 1
     path: Assets/Scenes/Level21.unity
-    guid: 7dfeaf297f7d2f4409a5c337b9a41d97
-  - enabled: 1
-    path: Assets/Scenes/Level22.unity
-    guid: 9936246492342bc45995455c74250774
-  - enabled: 1
-    path: Assets/Scenes/Level23.unity
-    guid: 3c6dbfcd0bc2cde4f8e5e201bc9bd8ea
-  - enabled: 1
-    path: Assets/Scenes/Level24.unity
-    guid: a548f9c92a1637e4b88f94763def53d3
-  - enabled: 1
-    path: Assets/Scenes/Level25.unity
-    guid: 8e76ebafc0fe1f34f84a0c128306c3e9
-  - enabled: 1
-    path: Assets/Scenes/Level26.unity
-    guid: d792d9f0827901448b2ccfe90211a2f1
-  - enabled: 1
-    path: Assets/Scenes/Level27 - capricorn.unity
-    guid: 1556f7d3e24e45f4e8305ed411dba275
-  - enabled: 1
-    path: Assets/Scenes/Level28.unity
-    guid: 51d46d6b93fa30f4db68d36eb5022a9c
-  - enabled: 1
-    path: Assets/Scenes/Level29.unity
-    guid: 2de24856b5c9a0c4c925fb367f171116
-  - enabled: 1
-    path: Assets/Scenes/Level30.unity
-    guid: 8014969add6f04d4a8966a3de6a09b2a
-  - enabled: 1
-    path: Assets/Scenes/Level31.unity
     guid: 02ac548a2a86d2945827e32791f7cd8f
   - enabled: 1
-    path: Assets/Scenes/Level32.unity
+    path: Assets/Scenes/Level22.unity
     guid: 22c4283c68bfd98478dd86f5d0f7f9ec
   - enabled: 1
-    path: Assets/Scenes/Level33.unity
+    path: Assets/Scenes/Level23.unity
     guid: 8f3089546fbd6e144b64abc5bd01a6f9
   - enabled: 1
-    path: Assets/Scenes/Level34.unity
+    path: Assets/Scenes/Level24.unity
     guid: 7a360b38c42531142b0d7b8b0fafb8e1
   - enabled: 1
-    path: Assets/Scenes/Level35.unity
+    path: Assets/Scenes/Level25.unity
     guid: 55d31a011a434354a88347d7dcd3ea56
   - enabled: 1
-    path: Assets/Scenes/Level36.unity
+    path: Assets/Scenes/Level26.unity
     guid: 59d6d4ee294746d44b206f051d1d4598
   - enabled: 1
-    path: Assets/Scenes/Level37.unity
+    path: Assets/Scenes/Level27.unity
     guid: 858e6189ea472c5418150ffd82907d1a
   - enabled: 1
-    path: Assets/Scenes/Level38 - Taurus.unity
+    path: Assets/Scenes/Level28 - Taurus.unity
     guid: d13ee66b021ee8e44818a227e6a4c681
   - enabled: 1
-    path: Assets/Scenes/Level39.unity
+    path: Assets/Scenes/Level29.unity
     guid: cf49a303cc5ed8e45a27ecf43452f06a
   - enabled: 1
-    path: Assets/Scenes/Level40.unity
+    path: Assets/Scenes/Level30.unity
     guid: 689b77af2add80d4cbf4f81ebefa29b1
+  - enabled: 1
+    path: Assets/Scenes/Level31.unity
+    guid: 7dfeaf297f7d2f4409a5c337b9a41d97
+  - enabled: 1
+    path: Assets/Scenes/Level32.unity
+    guid: 9936246492342bc45995455c74250774
+  - enabled: 1
+    path: Assets/Scenes/Level33.unity
+    guid: 3c6dbfcd0bc2cde4f8e5e201bc9bd8ea
+  - enabled: 1
+    path: Assets/Scenes/Level34.unity
+    guid: a548f9c92a1637e4b88f94763def53d3
+  - enabled: 1
+    path: Assets/Scenes/Level35.unity
+    guid: 8e76ebafc0fe1f34f84a0c128306c3e9
+  - enabled: 1
+    path: Assets/Scenes/Level36.unity
+    guid: d792d9f0827901448b2ccfe90211a2f1
+  - enabled: 1
+    path: Assets/Scenes/Level37 - capricorn.unity
+    guid: 1556f7d3e24e45f4e8305ed411dba275
+  - enabled: 1
+    path: Assets/Scenes/Level38.unity
+    guid: 51d46d6b93fa30f4db68d36eb5022a9c
+  - enabled: 1
+    path: Assets/Scenes/Level39.unity
+    guid: 2de24856b5c9a0c4c925fb367f171116
+  - enabled: 1
+    path: Assets/Scenes/Level40.unity
+    guid: 8014969add6f04d4a8966a3de6a09b2a
   - enabled: 1
     path: Assets/Scenes/Level41.unity
     guid: ef29f768cfd1c8b418e70925f1974a56
