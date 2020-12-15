@@ -13,7 +13,6 @@ public class SoundController : MonoBehaviour
     public int numberOfCurrentSong = 0;
     public bool nextSongQueue = false;
     public float timePlayNextSong = 2f;
-    string sound;
 
     public Slider musicSlider;
     public Slider soundEffectSlider;
