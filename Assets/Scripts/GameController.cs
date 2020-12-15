@@ -11,6 +11,8 @@ public class GameController : MonoBehaviour
     public List<ButtonGame> listButtonsComplete;
     public List<GameObject> listObjectsToReveal;
     public List<ButtonGame> buttonsFiltered;
+    public List<ButtonGame> buttonsInvisible;
+    public List<ButtonGame> buttonsTeleport;
 
     public Camera mainCamera;
     public bool allowPlayerControl = false;
@@ -72,6 +74,8 @@ public class GameController : MonoBehaviour
         }
 
         soundController.LoadGameVolume();
+        getButtonsInvisible();
+        getButtonsTeleport();
 
     }
 
@@ -236,16 +240,12 @@ public class GameController : MonoBehaviour
     {
         Animator animatorBtn;
 
-        foreach (ButtonGame button in listButtonsComplete)
+        foreach (ButtonGame button in buttonsInvisible)
         {
             animatorBtn = button.GetComponent<Animator>();
-            if (button.isInvisible)
-            {
-                animatorBtn.SetBool("Invisible", true);
-                animatorBtn.SetBool("ButtonOff", false);
-                yield return new WaitForSeconds(0.3f);
-            }
-
+            animatorBtn.SetBool("Invisible", true);
+            animatorBtn.SetBool("ButtonOff", false);
+            yield return new WaitForSeconds(0.3f);
         }
 
     }
@@ -253,18 +253,22 @@ public class GameController : MonoBehaviour
     IEnumerator TeleportButtons()
     {
         Animator animatorBtn;
-        yield return new WaitForSeconds(0.3f);
-        foreach (ButtonGame button in listButtonsComplete)
+        if(buttonsTeleport.Count == 0)
         {
-            animatorBtn = button.GetComponent<Animator>();
-            if (button.canTeleport)
+            allowPlayerControl = true;
+            yield return new WaitForSeconds(0f);
+        } else
+        {
+            yield return new WaitForSeconds(0.3f);
+            foreach (ButtonGame button in buttonsTeleport)
             {
+                animatorBtn = button.GetComponent<Animator>();
                 StartCoroutine(button.Teleport(animatorBtn));
                 yield return new WaitForSeconds(1f);
             }
-        }
 
-        allowPlayerControl = true;
+            allowPlayerControl = true;
+        }
     }
 
     public void ResetButtons()
@@ -280,7 +284,6 @@ public class GameController : MonoBehaviour
             button.isClickable = true;
             button.ResetPosition();
             button.NormalizeLightButtonOff();
-
         }
 
         buttonExpected = 0;
@@ -292,7 +295,7 @@ public class GameController : MonoBehaviour
 
     IEnumerator RevealStars()
     {
-        StartCoroutine(PlayWonAnimation());
+        StartCoroutine(PlayVictoryAnimation());
 
         int i = 0;
 
@@ -345,7 +348,7 @@ public class GameController : MonoBehaviour
         }
     }
 
-    IEnumerator PlayWonAnimation()
+    IEnumerator PlayVictoryAnimation()
     {
         Instantiate(animationWonPrefab, new Vector3(2.56f, 0.67f, 0f), Quaternion.identity);
         soundController.PlayAudioOnce(starSounds[Random.Range(0, 2)], 0.1f);
@@ -355,6 +358,32 @@ public class GameController : MonoBehaviour
             yield return new WaitForSeconds(0.9f);
             Instantiate(animationWonPrefab, new Vector3(Random.Range(-4f, 9.5f), Random.Range(-3f, 3.2f), 0f), Quaternion.identity);
             soundController.PlayAudioOnce(starSounds[Random.Range(0, 2)], 0.1f);
+        }
+    }
+
+    void getButtonsInvisible()
+    {
+        buttonsInvisible = new List<ButtonGame>();
+        foreach (ButtonGame button in listButtonsComplete)
+        {
+            if (button.isInvisible)
+            {
+                buttonsInvisible.Add(button);
+            }
+
+        }
+    }
+
+    void getButtonsTeleport()
+    {
+        buttonsTeleport = new List<ButtonGame>();
+        foreach (ButtonGame button in listButtonsComplete)
+        {
+            if (button.canTeleport)
+            {
+                buttonsTeleport.Add(button);
+            }
+
         }
     }
 
