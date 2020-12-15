@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.Experimental.Rendering.LWRP;
 
 public class GameController : MonoBehaviour
 {
@@ -293,9 +294,18 @@ public class GameController : MonoBehaviour
     {
         StartCoroutine(PlayWonAnimation());
 
+        int i = 0;
+
         foreach (GameObject objectToReveal in listObjectsToReveal)
         {
             objectToReveal.SetActive(true);
+
+            if (i < listButtons.Count) {
+                // Turn off buttons lights when revealing stars
+                listButtons[i].gameObject.GetComponentInChildren<Light2D>().intensity = 0;
+            }
+
+            i++;
             yield return new WaitForSeconds(timeToShowStars);
         }
 
