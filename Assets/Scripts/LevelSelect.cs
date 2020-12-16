@@ -75,6 +75,7 @@ public class LevelSelect : MonoBehaviour
 
     public void ReturnToMenu()
     {
+        soundController.PlayAudioOnce(menuClick3, 0.8f);
         SceneManager.LoadScene(0);
     }
 }
