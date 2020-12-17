@@ -16,8 +16,9 @@ public class SteamAchievements : MonoBehaviour
 
     void Awake()
     {
-        //PlayerPrefs.DeleteAll(); // apaga todo o save e as estatisticas
-        //SteamUserStats.ResetAllStats(true); // apaga todas as conquistas
+        //PlayerPrefs.DeleteAll(); // erase save
+        //SteamUserStats.ResetAllStats(true); // erase all achievements
+        //PlayerPrefs.SetInt("PlayerProgress", 61); // unluck all levels
 
         if (instance != null && instance != this)
         {

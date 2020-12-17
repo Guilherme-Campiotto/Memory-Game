@@ -330,7 +330,7 @@ public class GameController : MonoBehaviour
     {
         int levelSaved = PlayerPrefs.GetInt("PlayerProgress");
 
-        if(levelSaved < level)
+        if(levelSaved < level && level < 62)
         {
             PlayerPrefs.SetInt("PlayerProgress", level);
         }
