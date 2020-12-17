@@ -277,6 +277,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Star
       objectReference: {fileID: 0}
+    - target: {fileID: 6775745031723754815, guid: bf3bdc85caf22ed4f8616cc94082bbfb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf3bdc85caf22ed4f8616cc94082bbfb, type: 3}
 --- !u!1 &341516746 stripped
@@ -781,6 +786,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Star (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775745031723754815, guid: bf3bdc85caf22ed4f8616cc94082bbfb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf3bdc85caf22ed4f8616cc94082bbfb, type: 3}

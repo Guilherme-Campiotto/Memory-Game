@@ -39,7 +39,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.15768664, y: 0.06319281}
   m_AnchorMax: {x: 0.84465677, y: 0.93680084}
-  m_AnchoredPosition: {x: 1280, y: 0.9000244}
+  m_AnchoredPosition: {x: 1158, y: 0.9000244}
   m_SizeDelta: {x: 7, y: -1.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &26215771
@@ -291,14 +291,14 @@ RectTransform:
   m_GameObject: {fileID: 538083903}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.1297102, y: 2.1297102, z: 2.1297102}
+  m_LocalScale: {x: 2.4278696, y: 2.4278696, z: 2.4278696}
   m_Children: []
   m_Father: {fileID: 709565484}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -209, y: 0}
+  m_AnchoredPosition: {x: -209, y: -0.04116}
   m_SizeDelta: {x: 43, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &538083906
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4d73a885d0a361e46b1de5943201b2ae, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f943fe5aff92f8e468e0cd4d69724f0f, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -533,7 +533,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2af851f6429e96a4e9cdc7396e13f193, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2825c83a9c687a041b1e3dc396bf745e, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -969,12 +969,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a8b9edb3d7028f648a6a04a2a565f247, type: 3}
-    m_FontSize: 60
+    m_Font: {fileID: 12800000, guid: 75933f52d514442418ee9a890042b014, type: 3}
+    m_FontSize: 63
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 61
+    m_MinSize: 6
+    m_MaxSize: 72
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1079,7 +1079,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 55d830aff9b8ccb4fa7f06ffc97977a4, type: 3}
+    m_Font: {fileID: 12800000, guid: 75933f52d514442418ee9a890042b014, type: 3}
     m_FontSize: 55
     m_FontStyle: 0
     m_BestFit: 0
@@ -1299,14 +1299,14 @@ RectTransform:
   m_GameObject: {fileID: 1634546877}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.1297102, y: 2.1297102, z: 2.1297102}
+  m_LocalScale: {x: 2.4278696, y: 2.4278696, z: 2.4278696}
   m_Children: []
   m_Father: {fileID: 554042359}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -212.5, y: 0.9}
+  m_AnchoredPosition: {x: -209, y: 0}
   m_SizeDelta: {x: 43, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1634546880
@@ -1335,7 +1335,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4d73a885d0a361e46b1de5943201b2ae, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f943fe5aff92f8e468e0cd4d69724f0f, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1409,7 +1409,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: c538231d171518744a7478c65964ca65, type: 3}
+    m_Font: {fileID: 12800000, guid: 75933f52d514442418ee9a890042b014, type: 3}
     m_FontSize: 19
     m_FontStyle: 0
     m_BestFit: 0
@@ -1488,12 +1488,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a8b9edb3d7028f648a6a04a2a565f247, type: 3}
-    m_FontSize: 60
+    m_Font: {fileID: 12800000, guid: 75933f52d514442418ee9a890042b014, type: 3}
+    m_FontSize: 63
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 61
+    m_MinSize: 6
+    m_MaxSize: 72
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1567,7 +1567,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0010071, y: 0}
+  m_AnchoredPosition: {x: -0.00046392, y: 0}
   m_SizeDelta: {x: 309.71, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1752752724
@@ -1597,12 +1597,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a8b9edb3d7028f648a6a04a2a565f247, type: 3}
-    m_FontSize: 60
+    m_Font: {fileID: 12800000, guid: 75933f52d514442418ee9a890042b014, type: 3}
+    m_FontSize: 63
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 61
+    m_MinSize: 6
+    m_MaxSize: 72
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1906,14 +1906,14 @@ RectTransform:
   m_GameObject: {fileID: 5149800892890206007}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.1297102, y: 2.1297102, z: 2.1297102}
+  m_LocalScale: {x: 2.4278696, y: 2.4278696, z: 2.4278696}
   m_Children: []
   m_Father: {fileID: 464805113}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -166, y: 0}
+  m_AnchoredPosition: {x: -163, y: 1}
   m_SizeDelta: {x: 43, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7874576243788524470
@@ -1942,7 +1942,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4d73a885d0a361e46b1de5943201b2ae, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f943fe5aff92f8e468e0cd4d69724f0f, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2038,7 +2038,6 @@ GameObject:
   - component: {fileID: 8590017768095049985}
   - component: {fileID: 8590017768095049984}
   - component: {fileID: 7253735816177989755}
-  - component: {fileID: 7253735815267055844}
   m_Layer: 5
   m_Name: CanvasMenu
   m_TagString: Untagged
@@ -2165,25 +2164,3 @@ MonoBehaviour:
   exitPanel: {fileID: 0}
   soundConfigAnimator: {fileID: 0}
   isSoundConfigOpen: 0
---- !u!114 &7253735815267055844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8590017768095049987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 130ce221bc74bac49bd56f3c02258ccf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fps: 0
-  timeTotal: 0
-  timeLevel: 0
-  timeLevelSaved: 0
-  numberOfTries: 0
-  deltaTime: 0
-  txtFps: {fileID: 0}
-  txtTimeTotal: {fileID: 0}
-  txtTimeLevel: {fileID: 0}
-  txtNumberOfTries: {fileID: 0}
