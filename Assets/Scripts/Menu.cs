@@ -32,7 +32,8 @@ public class Menu : MonoBehaviour
 
     public Animator soundConfigAnimator;
     public bool isSoundConfigOpen = false;
-    int previousColorPosition;
+    int previousColorCameraPosition;
+    int previousColorCanvasPosition;
 
     void Start()
     {
@@ -143,9 +144,10 @@ public class Menu : MonoBehaviour
             do
             {
                 newColorPosition = Random.Range(0, GameConfiguration.colorsList.Count);
-            } while (newColorPosition == previousColorPosition);
+                Debug.Log("Color Camera: " + newColorPosition);
+            } while (newColorPosition == previousColorCameraPosition || newColorPosition == previousColorCanvasPosition);
 
-            previousColorPosition = newColorPosition;
+            previousColorCameraPosition = newColorPosition;
 
             //int number = Random.Range(0, GameConfiguration.colorsList.Count);
             camera.backgroundColor = GameConfiguration.colorsList[newColorPosition];
@@ -160,9 +162,10 @@ public class Menu : MonoBehaviour
             do
             {
                 newColorPosition = Random.Range(0, GameConfiguration.colorsList.Count);
-            } while (newColorPosition == previousColorPosition);
+                Debug.Log("Color Canvas: " + newColorPosition);
+            } while (newColorPosition == previousColorCanvasPosition || newColorPosition == previousColorCameraPosition);
 
-            previousColorPosition = newColorPosition;
+            previousColorCanvasPosition = newColorPosition;
 
             //int number = Random.Range(0, GameConfiguration.colorsList.Count);
             canvasImage.color = GameConfiguration.colorsList[newColorPosition];
@@ -173,8 +176,8 @@ public class Menu : MonoBehaviour
     {
         soundController.PlayAudioOnce(menuClick2, 0.2f);
         GameConfiguration.fixedBackground = true;
-        GenerateRandomBackgroundColorCamera();
         GenerateRandomBackgroundColorCanvasImage();
+        GenerateRandomBackgroundColorCamera();
     }
 
     public void OpenLevelSelectMenu()
