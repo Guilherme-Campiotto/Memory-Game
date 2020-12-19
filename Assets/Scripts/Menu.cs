@@ -32,6 +32,7 @@ public class Menu : MonoBehaviour
 
     public Animator soundConfigAnimator;
     public bool isSoundConfigOpen = false;
+    int previousColorPosition;
 
     void Start()
     {
@@ -136,14 +137,35 @@ public class Menu : MonoBehaviour
     {
         if(camera != null)
         {
-            camera.backgroundColor = GameConfiguration.colorsList[Random.Range(0, GameConfiguration.colorsList.Count)];
+
+            int newColorPosition;
+
+            do
+            {
+                newColorPosition = Random.Range(0, GameConfiguration.colorsList.Count);
+            } while (newColorPosition == previousColorPosition);
+
+            previousColorPosition = newColorPosition;
+
+            //int number = Random.Range(0, GameConfiguration.colorsList.Count);
+            camera.backgroundColor = GameConfiguration.colorsList[newColorPosition];
         }
     }
     void GenerateRandomBackgroundColorCanvasImage()
     {
         if(canvasImage != null)
         {
-            canvasImage.color = GameConfiguration.colorsList[Random.Range(0, GameConfiguration.colorsList.Count)];
+            int newColorPosition;
+
+            do
+            {
+                newColorPosition = Random.Range(0, GameConfiguration.colorsList.Count);
+            } while (newColorPosition == previousColorPosition);
+
+            previousColorPosition = newColorPosition;
+
+            //int number = Random.Range(0, GameConfiguration.colorsList.Count);
+            canvasImage.color = GameConfiguration.colorsList[newColorPosition];
         }
     }
 

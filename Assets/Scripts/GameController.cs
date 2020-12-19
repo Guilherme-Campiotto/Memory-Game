@@ -303,9 +303,9 @@ public class GameController : MonoBehaviour
         {
             objectToReveal.SetActive(true);
 
-            if (i < listButtons.Count) {
+            if (i < buttonsFiltered.Count) {
                 // Turn off buttons lights when revealing stars
-                listButtons[i].gameObject.GetComponentInChildren<Light2D>().intensity = 0;
+                buttonsFiltered[i].gameObject.GetComponentInChildren<Light2D>().intensity = 0;
             }
 
             i++;

@@ -9,8 +9,8 @@ public static class GameConfiguration
     {
         new Color32(151, 240, 151, 255),
         new Color32(0, 150, 88, 255),
-        new Color32(0, 102, 255, 255),
-        new Color32(74, 134, 232, 255),
+        new Color32(0, 102, 255, 255), // parecido
+        new Color32(74, 134, 232, 255), // parecido
         new Color32(171, 61, 244, 255),
         new Color32(89, 70, 164, 255)
     };
