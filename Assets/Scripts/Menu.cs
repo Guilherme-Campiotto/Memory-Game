@@ -144,7 +144,6 @@ public class Menu : MonoBehaviour
             do
             {
                 newColorPosition = Random.Range(0, GameConfiguration.colorsList.Count);
-                Debug.Log("Color Camera: " + newColorPosition);
             } while (newColorPosition == previousColorCameraPosition || newColorPosition == previousColorCanvasPosition);
 
             previousColorCameraPosition = newColorPosition;
@@ -162,7 +161,6 @@ public class Menu : MonoBehaviour
             do
             {
                 newColorPosition = Random.Range(0, GameConfiguration.colorsList.Count);
-                Debug.Log("Color Canvas: " + newColorPosition);
             } while (newColorPosition == previousColorCanvasPosition || newColorPosition == previousColorCameraPosition);
 
             previousColorCanvasPosition = newColorPosition;
