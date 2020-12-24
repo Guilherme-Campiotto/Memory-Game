@@ -108,9 +108,10 @@ public class GameController : MonoBehaviour
         }
     }
 
+    // Return to level select when the game is finished
     void EndGame()
     {
-        Debug.Log("Game ends.");
+        SceneManager.LoadScene(1);
     }
 
     public bool isButtonPresssedWrongInsideList(string buttonName)
@@ -189,7 +190,7 @@ public class GameController : MonoBehaviour
 
         }
 
-        if (nextScene > 62)
+        if (nextScene > 61)
         {
             EndGame();
         }
